@@ -32,3 +32,35 @@ body{
     font-family: Helvetica, Verdana, sans-serif, Arial;
 }
 
+.tile{
+    background-color: rgba(200,200,200,.6);
+    margin: .2em auto;
+    border: 1px solid;
+    border-radius: 15px;
+}
+
+/* Mobile first rules */
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+}
+
+nav{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+footer{
+    margin-bottom: 2em;
+}
+
+#site-brand{
+    font-size: 2em;
+    font-weight: 600;
+}
+
+
+
+

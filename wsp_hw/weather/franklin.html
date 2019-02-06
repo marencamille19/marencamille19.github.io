@@ -10,9 +10,9 @@
 </head>
 
 <body>
-	<header>
-		<p><img src="images/logo.jpeg" alt="purple umbrella with raindrops"></p>
-		<h1><b>The Weather Site</b></h1>
+	<header id="page-header">
+		<p><img src="images/logo.jpeg" id="logo" alt="purple umbrella with raindrops"></p>
+		<h1 id="site-brand"><b>The Weather Site</b></h1>
 		<nav>
 			<p> <a href="/wsp_hw/weather-plan.html" title="Go to the Weather Site home page">Current</a>
 				<a href="#search" title="search web page">Search</a>
@@ -23,26 +23,28 @@
 	</header>
 	<main>
 	<h1 id="locName">Franklin, ID</h1>
-		<p><strong>Zip: </strong>83237 | <strong>Elevation: </strong>1514.246 ft. | <strong>Location: </strong>
+		<p id="locInfo"><strong>Zip: </strong>83237 | <strong>Elevation: </strong>1514.246 ft. | <strong>Location: </strong>
 			42.07&deg; N, 111.79&deg; W</p>
-		<section>
-			<h2>Temperature</h2>
+		<div id='curWeather'>
+			<section>
+			<h2 id="temps" class="tile">Temperature</h2>
 			<h2>40&deg; F</h2>
 			<h4>64&deg; F 41&deg; F</h4>
 			<h4>Feels like 25&deg; F</h4>
 		</section>
-		<section>
+		<section id="wind" class="tile">
 			<h2>Wind</h2>
 			<img src="images/wind-pointer.png" alt="wind pointer">
 			<h3>2 mph</h3>
 			<h3><strong>Direction: </strong>SW</h3>
 			<h3><strong>Gusts: </strong>5mph</h3>
 		</section>
-		<section>
+		<section id="summary" class="tile">
 			<h2>Clear</h2>
 			<img src="images/clear.jpg" alt="orchard with sunlight shining through trees">
 		</section>
-		<section>
+		</div>
+		<section id="hourly">
 			<h2>Hourly Forecast</h2>
 			<ul>
 				<li>10am: 41&deg;F</li>
