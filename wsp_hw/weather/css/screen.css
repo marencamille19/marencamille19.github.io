@@ -10,9 +10,17 @@
 @import url('https://fonts.googleapis.com/css?family=Sansita');
 @import url('normalize.css');
 
+
 /* Section 2 - General Rules */
 header{
     background-color: #0e89d5;
+}
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -20,6 +28,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 body{
-    font-size: 1.5em;
-    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-family: Helvetica, Verdana, sans-serif, Arial;
 }
+
