@@ -52,6 +52,13 @@ body{
     color: blue;
 }
 
+#hourlyTable{
+    display: inline;
+}
+
+nav{
+    display: inline;
+}
 /* Mobile first rules */
 
 nav ul li{
