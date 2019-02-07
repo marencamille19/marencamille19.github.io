@@ -45,15 +45,14 @@ body{
     text-align: center;
 }
 
-.hc{
-    display: inline;
-}
 #hot{
     color: red;
+    text-align: left;
 }
 
 #cold{
     color: blue;
+    text-align: right;
 }
 
 #hourlyTable{
@@ -71,8 +70,8 @@ body{
 
 #hourly{
     list-style-type:none;
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: auto;
     display: block;
     width: 60px;
 }
