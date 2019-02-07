@@ -53,7 +53,8 @@ body{
 }
 
 #hourlyTable{
-    display: inline-block;
+    display: block;
+    width: 60px;
 }
 
 /* Mobile first rules */
