@@ -12,9 +12,13 @@
 
 
 /* Section 2 - General Rules */
+html{
+    background-image: "images/clear.jpg";
+}
+
 header{
     background-color: #0e89d5;
-    display: inline-block;
+    display: inline;
 }
 html{
     box-sizing: border-box;
