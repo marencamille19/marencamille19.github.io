@@ -37,6 +37,15 @@ body{
     margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
+    align-items: center;
+}
+
+#hot{
+    font-color: red;
+}
+
+#cold{
+    font-color: blue;
 }
 
 /* Mobile first rules */
@@ -61,7 +70,7 @@ footer{
     font-weight: 600;
 }
 
-
+ 
 
 
 
