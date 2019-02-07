@@ -53,12 +53,9 @@ body{
 }
 
 #hourlyTable{
-    display: inline;
+    display: inline-block;
 }
 
-nav{
-    display: inline;
-}
 /* Mobile first rules */
 
 nav ul li{
