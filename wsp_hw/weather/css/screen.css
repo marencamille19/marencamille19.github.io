@@ -14,7 +14,7 @@
 /* Section 2 - General Rules */
 header{
     background-color: #0e89d5;
-    align-content: block;
+    display: inline;
 }
 html{
     box-sizing: border-box;
@@ -43,7 +43,7 @@ body{
 }
 
 .hc{
-    text-align: center; 
+    display: inline;
 }
 #hot{
     color: red;
@@ -54,7 +54,7 @@ body{
 }
 
 #hourlyTable{
-    display: block;
+    display: inline-block;
     width: 60px;
 }
 
@@ -64,7 +64,7 @@ body{
 /* Mobile first rules */
 
 nav ul li{
-    display: block;
+    display: inline-block;
     list-style: none;
 }
 
