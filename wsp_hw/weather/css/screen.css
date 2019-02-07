@@ -40,6 +40,9 @@ body{
     align-items: center;
 }
 
+.hc{
+    text-align: center; 
+}
 #hot{
     color: red;
 }
