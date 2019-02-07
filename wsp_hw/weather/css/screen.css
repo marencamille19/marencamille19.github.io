@@ -41,11 +41,11 @@ body{
 }
 
 #hot{
-    font-color: red;
+    color: red;
 }
 
 #cold{
-    font-color: blue;
+    color: blue;
 }
 
 /* Mobile first rules */
