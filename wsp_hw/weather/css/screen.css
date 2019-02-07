@@ -57,10 +57,13 @@ body{
     width: 60px;
 }
 
+#logo{
+    width: 30px;
+}
 /* Mobile first rules */
 
 nav ul li{
-    display: inline-block;
+    display: block;
     list-style: none;
 }
 
