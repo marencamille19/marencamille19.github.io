@@ -69,7 +69,6 @@ body{
 
 #hourly{
     list-style-type:none;
-    display: inline-block;
     width: 60px;   
 }
 
