@@ -12,7 +12,7 @@
 
 
 /* Section 2 - General Rules */
-header{
+#page-header{
     background-color: #0e89d5;
 }
 html{
@@ -39,6 +39,10 @@ body{
     border-radius: 15px;
     align-items: center;
     text-align: center;
+}
+
+.hc{
+    
 }
 
 #hot{
