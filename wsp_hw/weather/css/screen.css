@@ -12,11 +12,14 @@
 
 
 /* Section 2 - General Rules */
-#page-header{
+header{
     background-color: #0e89d5;
-    display: flex;
     align-items: center;
+    width: 100%;
+    padding: 3px;
+    padding-bottom: 6px;
 }
+
 html{
     box-sizing: border-box;
 }
@@ -27,6 +30,10 @@ html{
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Sansita', sans-serif;
+}
+
+h1{
+    position: relative; 
 }
 
 body{
@@ -61,13 +68,11 @@ body{
 
 
 #logo{
-    height: 100px;
+    height: 70px;
+    float: left;
+    margin-right: 5px;
 }
 
-#umbrella{
-    display: inline-block;
-    background-color: #0e89d5;
-}
 
 #hourly{
     list-style-type:none;
@@ -75,17 +80,28 @@ body{
 
 }
 
+footer{
+    margin-bottom: 150px;
+}
 /* Mobile first rules */
+
+nav{
+    background-color: #0e89d5;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
 
 nav ul li{
     display: inline-block;
     list-style: none;
+    margin-left: 10px;
 }
 
-nav{
-    position: fixed;
-    bottom: 0;
-    left: 0;
+nav ul li a{
+    text-decoration: none;
+    color: white;
 }
 
 footer{
@@ -94,7 +110,7 @@ footer{
 
 #site-brand{
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 2em;
+    font-size: 30px;
     font-weight: 600;
 }
 
