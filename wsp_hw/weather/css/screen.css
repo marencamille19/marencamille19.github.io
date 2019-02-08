@@ -53,12 +53,6 @@ body{
     color: blue;
 }
 
-#hourlyTable{
-    display: inline-block;
-    width: 60px;
-    list-style: none;
-}
-
 #logo{
     height: 100px;
 }
