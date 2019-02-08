@@ -81,7 +81,8 @@ body{
 }
 
 footer{
-    margin-bottom: 150px;
+    margin-bottom: 65px;
+    background-color: #0e89d5;
 }
 /* Mobile first rules */
 
@@ -102,10 +103,6 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: white;
-}
-
-footer{
-    margin-bottom: 2em;
 }
 
 #site-brand{
