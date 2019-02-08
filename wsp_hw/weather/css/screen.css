@@ -43,12 +43,10 @@ body{
 
 #hot{
     color: red;
-    text-align: left;
 }
 
 #cold{
     color: blue;
-    text-align: right;
 }
 
 #hourlyTable{
