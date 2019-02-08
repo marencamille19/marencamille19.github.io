@@ -68,8 +68,6 @@ body{
 
 #hourly{
     list-style-type:none;
-    margin: auto;
-    padding: auto;
     display: inline-block;
     width: 60px;   
 }
