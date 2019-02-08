@@ -63,7 +63,7 @@ body{
 }
 
 #umbrella{
-    display: inline;
+    display: inline-block;
     background-color: #0e89d5;
 }
 
