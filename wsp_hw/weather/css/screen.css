@@ -36,6 +36,11 @@ h1{
     position: relative; 
 }
 
+#curWeather{
+    background-image: url(/wsp_hw/weather/images/clear.jpg);
+    background-size: 1750px;
+}
+
 body{
     font-size: 20px;
     font-family: Helvetica, Verdana, sans-serif, Arial;
@@ -48,6 +53,20 @@ body{
     border-radius: 15px;
     align-items: center;
     text-align: center;
+}
+
+ul{
+    list-style: none;
+    display: inline;
+    bottom: 0;
+    padding-left: 0;
+    white-space: nowrap;
+}
+
+#hourly ul li{
+    display: inline-block;
+    margin-left: 10px;
+    white-space: nowrap;
 }
 
 .hc{
@@ -66,38 +85,40 @@ body{
     font-stretch: 2em;
 }
 
-
 #logo{
     height: 70px;
     float: left;
     margin-right: 5px;
+    padding-bottom: 25px;
 }
 
-
-#hourly{
-    list-style-type:none;
-    width: 60px; 
-
+#clear{
+    width: 300px; 
 }
 
 footer{
     margin-bottom: 65px;
     background-color: #0e89d5;
+    color: white;
 }
-/* Mobile first rules */
+/* Section 3: Mobile first rules */
 
 nav{
     background-color: #0e89d5;
     position: fixed;
     bottom: 0;
-    left: 0;
+    padding-left: 10;
     width: 100%;
+}
+
+nav ul{
+    padding: 20px;
 }
 
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin-left: 10px;
+    margin-left: 60px;
 }
 
 nav ul li a{
@@ -109,8 +130,10 @@ nav ul li a{
     font-family: Helvetica, Arial, sans-serif;
     font-size: 30px;
     font-weight: 600;
+    padding-left: 50px;
 }
 
+/*Section 4: Larger Screen rules*/
  
 
 
