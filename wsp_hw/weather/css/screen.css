@@ -36,6 +36,16 @@ h1{
     position: relative; 
 }
 
+h2{
+    margin: 5px;
+}
+
+#locInfo{
+    margin: 5px;
+    font-size: 11px;
+
+}
+
 #curWeather{
     background-image: url(/wsp_hw/weather/images/clear.jpg);
     background-size: 1750px;
@@ -55,19 +65,26 @@ body{
     text-align: center;
 }
 
-/* ul{
+ul{
     list-style: none;
     display: inline;
     bottom: 0;
     padding-left: 0;
+}
+
+#hourly ul{
+    overflow: auto;
+    overflow: scroll;
+    margin-top: 0px;
     white-space: nowrap;
+    padding-left: 5 px;
 }
 
 #hourly ul li{
     display: inline-block;
-    margin-left: 10px;
-    white-space: nowrap;
-} */
+    padding: 3px;
+    text-decoration: none;
+}
 
 .hc{
     display: inline;
@@ -92,16 +109,16 @@ body{
 #windSpeed{
     position: absolute;
     font-size: 30px;
-    top: 83%;
+    top: 68%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 #logo{
-    height: 70px;
+    height: 90px;
     float: left;
     margin-right: 5px;
-    padding-bottom: 25px;
+    padding-bottom: 5px;
 }
 
 #clear{
@@ -120,6 +137,7 @@ nav{
     position: fixed;
     bottom: 0;
     width: 100%;
+    white-space: nowrap;
 }
 
 nav ul{
