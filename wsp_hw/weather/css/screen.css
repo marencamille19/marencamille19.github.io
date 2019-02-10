@@ -68,27 +68,6 @@ body{
     text-align: center;
 }
 
-ul{
-    list-style: none;
-    display: inline;
-    bottom: 0;
-    padding-left: 0;
-}
-
-#hourly ul{
-    overflow: auto;
-    overflow: scroll;
-    margin-top: 0px;
-    white-space: nowrap;
-    padding-left: 5 px;
-}
-
-#hourly ul li{
-    display: inline-block;
-    padding: 3px;
-    text-decoration: none;
-}
-
 .hc{
     display: inline;
 }
@@ -118,10 +97,11 @@ ul{
 }
 
 #logo{
-    height: 90px;
+    height: 70px;
     float: left;
     margin-right: 5px;
     padding-bottom: 5px;
+    padding-top: 0;
 }
 
 #clear{
@@ -129,9 +109,23 @@ ul{
 }
 
 footer{
-    margin-bottom: 100px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 67px;
     background-color: #0e89d5;
     color: white;
+}
+
+#site-brand{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    padding-left: 50px;
+}
+
+#summary img{
+    width: 300px;
+    padding-bottom: 5px;
 }
 /* Section 3: Mobile first rules */
 
@@ -144,13 +138,14 @@ nav{
 }
 
 nav ul{
-    padding: 15px;
+    padding-left: 30px;
 }
 
 nav ul li{
     display: inline-block;
     list-style: none;
     margin-right: 5px;
+    padding: 0px;
 }
 
 nav ul li a{
@@ -158,11 +153,22 @@ nav ul li a{
     color: white;
 }
 
-#site-brand{
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    padding-left: 50px;
+#hourly h2{
+    text-align:center;
+}
+
+#hourly ul{
+    overflow: auto;
+    overflow: scroll;
+    margin-top: 0px;
+    white-space: nowrap;
+    padding-left: 5px;
+}
+
+#hourly ul li{
+    display: inline-block;
+    padding: 3px;
+    text-decoration: none;
 }
 
 /*Section 4: Larger Screen rules*/
