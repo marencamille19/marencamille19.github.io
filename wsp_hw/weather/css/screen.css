@@ -43,11 +43,14 @@ h2{
 #locInfo{
     margin: 5px;
     font-size: 11px;
+}
 
+#pointer{
+    transform: rotate(180deg);
 }
 
 #curWeather{
-    background-image: url(/wsp_hw/weather/images/clear.jpg);
+    background-image: url(/wsp_hw/weather/images/rain.jpg);
     background-size: 1750px;
 }
 
