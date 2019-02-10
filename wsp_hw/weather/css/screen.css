@@ -12,14 +12,6 @@
 
 
 /* Section 2 - General Rules */
-header{
-    background-color: #0e89d5;
-    align-items: center;
-    width: 100%;
-    padding: 3px;
-    padding-bottom: 6px;
-}
-
 html{
     box-sizing: border-box;
 }
@@ -28,113 +20,46 @@ html{
     box-sizing: inherit;
 }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Sansita', sans-serif;
-}
-
-h1{
-    position: relative; 
-}
-
-h2{
-    margin: 5px;
-}
-
-#locInfo{
-    margin: 5px;
-    font-size: 11px;
-}
-
-#pointer{
-    transform: rotate(180deg);
-}
-
-#curWeather{
-    background-image: url(/wsp_hw/weather/images/rain.jpg);
-    background-size: 1750px;
-}
-
-body{
-    font-size: 20px;
-    font-family: Helvetica, Verdana, sans-serif, Arial;
-}
-
 .tile{
     background-color: rgba(200,200,200,.6);
     margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
-    align-items: center;
-    text-align: center;
 }
 
-.hc{
-    display: inline;
-}
-
-#hot{
-    color: red;
-}
-
-#cold{
-    color: blue;
-}
-
-#currentTemp{
-    font-stretch: 2em;
-}
-
-#wind{
-    text-align: center;
-}
-
-#windSpeed{
-    position: absolute;
-    font-size: 30px;
-    top: 68%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+header{
+    background-color: #0e89d5;
+    width: 100%;
+    padding-bottom: 15px;
+    padding: 15px;
 }
 
 #logo{
-    height: 70px;
+    width: 70px;
     float: left;
     margin-right: 5px;
-    padding-bottom: 5px;
-    padding-top: 0;
-}
-
-#clear{
-    width: 250px; 
-}
-
-footer{
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 67px;
-    background-color: #0e89d5;
-    color: white;
 }
 
 #site-brand{
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    padding-left: 50px;
+    position: relative;
+    font-size: 29px;
 }
 
-#summary img{
-    width: 300px;
-    padding-bottom: 5px;
+h1{
+    padding: 0;
+    margin:0;
 }
-/* Section 3: Mobile first rules */
+
+h2, h3, h4, h5, h6{
+    font-family: 'Sansita', sans-serif;
+}
 
 nav{
     background-color: #0e89d5;
-    position: fixed;
-    bottom: 0;
     width: 100%;
-    white-space: nowrap;
+    bottom: 0;
+    left: 0;
 }
 
 nav ul{
@@ -153,8 +78,77 @@ nav ul li a{
     color: white;
 }
 
+#locInfo{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+body{
+    font-size: 20px;
+    font-family: Helvetica, sans-serif, Arial;
+}
+
+#currentTemp{
+    font-size: 80px;
+    margin: 10px;
+}
+
+.hc{
+    display: inline;
+    margin-left: 5px;
+}
+
+#hot{
+    color: red;
+}
+
+#cold{
+    color: blue;
+}
+
+#pointer{
+    transform: rotate(210deg);
+}
+
+#curWeather{
+    background-image: url(/wsp_hw/weather/images/rain.jpg);
+    background-size: 1400px;
+    text-align: center;
+}
+
+#summary img{
+    width: 300px;
+    padding-bottom: 5px;
+}
+
+footer{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 67px;
+    background-color: #0e89d5;
+    color: white;
+}
+
 #hourly h2{
-    text-align:center;
+    text-align: center;
+}
+
+/* Section 3: Mobile first rules */
+
+nav{
+    position: fixed;
+}
+
+#windSpeed{
+    font-size: 30px;
+    position: absolute;
+    top: 631px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#hourly h3{
+    text-align: center;
 }
 
 #hourly ul{
