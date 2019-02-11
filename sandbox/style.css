@@ -1,0 +1,13 @@
+/* Mobile styles */
+body {
+    background-color: yellow;
+}
+
+
+/* Larger styles */
+@media screen and (min-width: 800px){
+    /* css for large screens goes here */
+    body{
+        background-color: black;
+    }
+}
