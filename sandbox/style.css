@@ -10,4 +10,11 @@ body {
     body{
         background-color: black;
     }
+
+    ul{
+        /* make something a flex box */
+        display: flex;
+        list-style: none;
+        flex-flow: row-reverse; /*reverses items in flex box*/
+    }
 }
