@@ -35,6 +35,11 @@ header{
     margin-top: 0px;
 }
 
+#page-header{
+    display: flex;
+    justify-content: flex-end;
+    }
+
 #logo{
     width: 70px;
     float: left;
