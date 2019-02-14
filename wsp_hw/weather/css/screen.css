@@ -37,7 +37,7 @@ header{
 
 #page-header{
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     }
 
 #logo{
@@ -71,6 +71,8 @@ nav{
 
 nav ul{
     padding-left: 30px;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav ul li{
@@ -83,6 +85,11 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     color: white;
+}
+
+#page-content ul{
+    display: flex;
+
 }
 
 #locInfo{
@@ -141,20 +148,6 @@ footer{
     text-align: center;
 }
 
-/* Section 3: Mobile first rules */
-
-nav{
-    position: fixed;
-}
-
-#windSpeed{
-    font-size: 30px;
-    position: absolute;
-    top: 568px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 #hourly h3{
     text-align: center;
 }
@@ -173,6 +166,21 @@ nav{
     text-decoration: none;
 }
 
+nav{
+    position: fixed;
+}
+/* Section 3: Mobile first rules */
+@media screen and (min-width: 800px){
+    /* css for large screens goes here */
+
+    #windSpeed{
+        font-size: 30px;
+        position: absolute;
+        top: 568px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
 /*Section 4: Larger Screen rules*/
  
 
