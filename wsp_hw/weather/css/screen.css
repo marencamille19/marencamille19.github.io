@@ -103,7 +103,7 @@ nav ul li a {
     font-size: 15px;
 }
 
-#locName{
+#locName {
     padding-left: 10px;
 }
 
@@ -186,14 +186,12 @@ nav {
 } */
 
 /* Section 3: Mobile first rules */
-@media screen and (max-width: 799px) {
-     #windSpeed {
-        font-size: 30px;
-        position: absolute;
-        top: 575px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    } 
+#windSpeed {
+    font-size: 30px;
+    position: absolute;
+    top: 355px;
+    left: 46%;
+    transform: translate(-50%, -50%);
 }
 
 /*Section 4: Larger Screen rules*/
