@@ -12,22 +12,24 @@
 
 
 /* Section 2 - General Rules */
-html{
+html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after{
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
-.tile{
-    background-color: rgba(200,200,200,.6);
+.tile {
+    background-color: rgba(200, 200, 200, .6);
     margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
 }
 
-header{
+header {
     background-color: #0e89d5;
     padding: 3px;
     padding-bottom: 2px;
@@ -35,108 +37,112 @@ header{
     margin-top: 0px;
 }
 
-#page-header{
+#page-header {
     display: flex;
     justify-content: flex-start;
-    }
+}
 
-#logo{
+#logo {
     width: 70px;
     float: left;
     margin-right: 5px;
     margin-top: 0px;
 }
 
-#site-brand{
+#site-brand {
     font-size: 45px;
     position: relative;
 }
 
-h1{
+h1 {
     margin-top: 0;
 }
 
-h2, h3, h4, h5, h6{
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Sansita', sans-serif;
     padding: 10px;
     margin: 0;
 }
 
-nav{
+nav {
     background-color: #0e89d5;
     width: 100%;
     bottom: 0;
     left: 0;
 }
 
-nav ul{
+nav ul {
     padding-left: 30px;
     display: flex;
     justify-content: space-around;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     list-style: none;
     margin-right: 5px;
     padding: 0px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: white;
 }
 
-#page-content ul{
+#page-content ul {
     display: flex;
-
 }
 
-#locInfo{
+#locInfo {
+    list-style: none;
     margin-left: 10px;
     font-size: 15px;
 }
 
-body{
+body {
     font-size: 20px;
     font-family: Helvetica, sans-serif, Arial;
 }
 
-#currentTemp{
+#currentTemp {
     font-size: 80px;
     margin: 10px;
 }
 
-.hc{
+.hc {
     display: inline;
     margin-left: 5px;
 }
 
-#hot{
+#hot {
     color: red;
 }
 
-#cold{
+#cold {
     color: blue;
 }
 
-#pointer{
+#pointer {
     transform: rotate(210deg);
 }
 
-#curWeather{
+#curWeather {
     background-image: url(/wsp_hw/weather/images/rain.jpg);
     background-size: 1400px;
     text-align: center;
 }
 
-#summary img{
+#summary img {
     /* max-width: 100%? */
     width: 300px;
     padding-bottom: 5px;
 }
 
-footer{
+footer {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 67px;
@@ -144,15 +150,15 @@ footer{
     color: white;
 }
 
-#hourly h2{
+#hourly h2 {
     text-align: center;
 }
 
-#hourly h3{
+#hourly h3 {
     text-align: center;
 }
 
-#hourly ul{
+#hourly ul {
     overflow: auto;
     overflow: scroll;
     margin-top: 0px;
@@ -160,29 +166,36 @@ footer{
     padding-left: 5px;
 }
 
-#hourly ul li{
+#hourly ul li {
     display: inline-block;
     padding: 3px;
     text-decoration: none;
 }
 
-nav{
+nav {
     position: fixed;
 }
-/* Section 3: Mobile first rules */
-@media screen and (min-width: 800px){
-    /* css for large screens goes here */
 
-    #windSpeed{
+/* Section 3: Mobile first rules */
+@media screen and (max-width: 799px) {
+    #windSpeed {
         font-size: 30px;
         position: absolute;
-        top: 568px;
+        top: 625px;
         left: 50%;
         transform: translate(-50%, -50%);
     }
 }
+
 /*Section 4: Larger Screen rules*/
- 
+@media screen and (min-width: 800px) {
 
+    /* css for large screens goes here */
+    .tiles {
+        display: flex;
+        display: inline;
+        flex-direction: row;
 
+    }
 
+}
