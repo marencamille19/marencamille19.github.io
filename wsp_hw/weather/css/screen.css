@@ -99,8 +99,12 @@ nav ul li a {
 
 #locInfo {
     list-style: none;
-    margin-left: 10px;
+    padding-left: 10px;
     font-size: 15px;
+}
+
+#locName{
+    padding-left: 10px;
 }
 
 body {
@@ -176,26 +180,29 @@ nav {
     position: fixed;
 }
 
+/* #wind{
+    display: flex;
+
+} */
+
 /* Section 3: Mobile first rules */
 @media screen and (max-width: 799px) {
-    #windSpeed {
+     #windSpeed {
         font-size: 30px;
         position: absolute;
-        top: 625px;
+        top: 575px;
         left: 50%;
         transform: translate(-50%, -50%);
-    }
+    } 
 }
 
 /*Section 4: Larger Screen rules*/
 @media screen and (min-width: 800px) {
 
     /* css for large screens goes here */
-    .tiles {
+    #curWeather {
         display: flex;
-        display: inline;
         flex-direction: row;
-
+        align-items: stretch;
     }
-
 }
