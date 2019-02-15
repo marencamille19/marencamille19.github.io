@@ -187,14 +187,14 @@ nav {
 } */
 
 /* Section 3: Mobile first rules */
-#windSpeed {
-    font-size: 30px;
-    position: absolute;
-    top: 355px;
-    left: 46%;
-    transform: translate(-50%, -50%);
-}
 
+    #windSpeed {
+        font-size: 30px;
+        position: absolute;
+        top: 355px;
+        left: 46%;
+        transform: translate(-50%, -50%);
+    }
 /*Section 4: Larger Screen rules*/
 @media screen and (min-width: 800px) {
 
@@ -202,8 +202,24 @@ nav {
     #curWeather {
         display: flex;
         flex-direction: row;
-        align-items: stretch;
+        justify-content: space-between;
     }
 
+    .tile{
+        flex-grow: 1;
+    }
 
+    nav{
+       position: static; 
+    }
+
+    nav ul{
+        margin: 0;
+        padding-bottom: 5px;
+    }
+
+    footer{
+        margin-bottom: 0;
+        padding: 5px;
+    }
 }
