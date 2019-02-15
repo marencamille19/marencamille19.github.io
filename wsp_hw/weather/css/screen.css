@@ -168,12 +168,13 @@ footer {
     margin-top: 0px;
     white-space: nowrap;
     padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
 }
 
 #hourly ul li {
-    display: inline-block;
     padding: 3px;
-    text-decoration: none;
 }
 
 nav {
@@ -203,4 +204,6 @@ nav {
         flex-direction: row;
         align-items: stretch;
     }
+
+
 }
