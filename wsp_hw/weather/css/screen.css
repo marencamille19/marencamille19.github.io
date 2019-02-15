@@ -76,7 +76,6 @@ nav {
 }
 
 nav ul {
-    padding-left: 30px;
     display: flex;
     justify-content: space-around;
 }
