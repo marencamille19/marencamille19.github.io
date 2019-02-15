@@ -150,7 +150,7 @@ footer {
     margin-top: 5px;
     margin-bottom: 67px;
     background-color: #0e89d5;
-    color: white;
+    color: black;
 }
 
 #hourly h2 {
@@ -201,7 +201,7 @@ nav {
     #curWeather {
         display: flex;
         flex-direction: row;
-        background-size: 1500px;
+        background-size: 1700px;
     }
 
     .tile{
