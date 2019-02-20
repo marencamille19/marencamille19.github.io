@@ -184,24 +184,25 @@ nav {
     position: fixed;
 }
 
-/* #wind{
-    display: flex;
-
-} */
-
 /* Section 3: Mobile first rules */
 
-    #windSpeed {
+ #windSpeed {
         font-size: 30px;
         position: absolute;
-        top: 355px;
-        left: 46%;
+        top: 620px;
+        left: 50%;
         transform: translate(-50%, -50%);
     }
 /*Section 4: Larger Screen rules*/
 @media screen and (min-width: 800px) {
 
     /* css for large screens goes here */
+    #windSpeed{
+        position: absolute;
+        top: 400px;
+        left: 47%;
+        transform: translate(-50%, -50%); 
+    }
     #curWeather {
         display: flex;
         flex-direction: row;
