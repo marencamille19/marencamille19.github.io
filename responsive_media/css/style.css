@@ -109,9 +109,7 @@ h1 {
 	margin: 1em 0;
 }
 
-.featured-image img {
-	display: block;
-}
+
 
 .image-caption {
 	padding: .25em 1em;
@@ -156,6 +154,10 @@ h1 {
 .credits {
 	font-size: .8em;
 }
+/* 
+.large-image{
+	display: none;
+} */
 
 
 /********************************
@@ -166,10 +168,6 @@ h1 {
 @media (min-width: 41.67em) {
 	.small-image{
 		display: none;
-	}
-
-	.large-image{
-		display: block;
 	}
 
 	body {
@@ -197,9 +195,6 @@ h1 {
 	.featured-image {
 		margin: 0 1em 1em 0;
 		float: left;
-	}
-	.featured-image img{
-		background: url(/responsive_media/images/bridge-500.jpg) no-repeat;
 	}
 	.featured-video {
 		/* float: left; */
