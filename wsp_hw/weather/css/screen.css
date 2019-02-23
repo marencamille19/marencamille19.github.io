@@ -134,7 +134,8 @@ body {
 }
 
 #pointer {
-    background-image: url("/wsp_hw/weather/images/wind-pointer.png"), no-repeat;
+    background-image: url("/wsp_hw/weather/images/wind-pointer.png");
+    background-repeat: no-repeat;
     transform: rotate(210deg);
 }
 
