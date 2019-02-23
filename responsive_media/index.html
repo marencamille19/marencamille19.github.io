@@ -15,7 +15,7 @@
 		</header>
 		<nav class="page-nav">
 			<ul>
-				<li><a href="#" title="Fake home page link">Home</a></li>
+				<li><a href="/index.html" title="Fake home page link">Home</a></li>
 				<li><a href="#" title="Fake trails page link">Trails</a></li>
 				<li><a href="#" title="Fake lodging page link">Lodging</a></li>
 				<li><a href="#" title="Fake history page link">History</a></li>
@@ -26,7 +26,10 @@
 			<h1 class="main-title">Grand Canyon National Park</h1>
 
 			<figure class="featured-image">
-				<img src="/responsive_media/raw-images/bridge.jpg" alt="Picture from the Grand Canyon">
+				<picture class="featured-image">
+					<source media="(max-width: 750px)" srcset="images/bridge-300.jpg">
+					<img src="/responsive_media/images/bridge-500.jpg" alt="Picture from the Grand Canyon">
+				</picture>
 
 				<figcaption class="image-caption">
 					Fun in the Grand Canyon
