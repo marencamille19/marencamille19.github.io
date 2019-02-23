@@ -241,7 +241,9 @@ h1 {
 	}
 
 	.large-featured-image{
-
+		margin: 0 1em 1em 0;
+		float: left;
+		width: 50%;
 	}
 
 	.small-featured-image{
