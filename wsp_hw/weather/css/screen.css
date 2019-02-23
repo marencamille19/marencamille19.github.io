@@ -134,11 +134,12 @@ body {
 }
 
 #pointer {
+    background-image: url("/wsp_hw/weather/images/wind-pointer.png"), no-repeat;
     transform: rotate(210deg);
 }
 
 #curWeather {
-    background-image: url(/wsp_hw/weather/images/rain.jpg);
+    background-image: url(/wsp_hw/weather/images/rain-new.jpg);
     background-size: 1400px;
     text-align: center;
 }
