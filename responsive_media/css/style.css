@@ -164,6 +164,13 @@ h1 {
 ********************************/
 
 @media (min-width: 41.67em) {
+	.small-image{
+		display: none;
+	}
+
+	.large-image{
+		display: block;
+	}
 
 	body {
 		font-size: 1.25em;

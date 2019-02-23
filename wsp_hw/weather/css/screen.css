@@ -212,6 +212,10 @@ nav {
         background-size: 1700px;
     }
 
+    .small-thumbnail{
+        display: none;
+    }
+
     .tile{
         flex-grow: 1;
     }

@@ -11,19 +11,19 @@
 
 <body>
 	<header id='page-header'>
-	<p><img src="/wsp_hw/weather/images/logo-transparent-background.png" id="logo" alt="purple umbrella with raindrops"></p>
-		<h2 id="site-brand"><strong>The Weather Site</strong></h2>	
+		<p><img src="/wsp_hw/weather/images/logo-transparent-background.png" id="logo" alt="purple umbrella with raindrops"></p>
+		<h2 id="site-brand"><strong>The Weather Site</strong></h2>
 	</header>
 	<main id='page-content'>
-	<nav id='page-nav'>
-		<ul> 
-			<li><a href="/index.html" title="Go to the Weather Site home page">Current</a></li>
-			<li><a href="#search" title="search web page">Search</a></li>
-			<li><a href="/franklin.html" title="Go to Franklin web page">Franklin</a></li>
-			<li><a href="/greenville.html" title="Go to Greenville web page">Greenville</a></li>
-		</ul>
-	</nav>
-	<h1 id="locName">Franklin, ID</h1>
+		<nav id='page-nav'>
+			<ul>
+				<li><a href="/index.html" title="Go to the Weather Site home page">Current</a></li>
+				<li><a href="#search" title="search web page">Search</a></li>
+				<li><a href="/franklin.html" title="Go to Franklin web page">Franklin</a></li>
+				<li><a href="/greenville.html" title="Go to Greenville web page">Greenville</a></li>
+			</ul>
+		</nav>
+		<h1 id="locName">Franklin, ID</h1>
 		<ul id="locInfo">
 			<li><strong>Zip: </strong>83237 </li>
 			<li>| <strong>Elevation: </strong>1514.246 ft. </li>
@@ -31,25 +31,28 @@
 		</ul>
 		<div id='curWeather'>
 			<section id="temps" class="tile">
-			<h3>Temperature</h3>
-			<p id="currentTemp">40&deg; F</p>
-			<!-- make a list! -->
-			<p id="hot" class="hc">64&deg; F    </p>
-			<p id="cold" class="hc">41&deg; F</p>
-			<p>Feels like 25&deg; F</p>
-		</section>
-		<section id="wind" class="tile">
-			<!-- change Wind from h3 to p? give it an id and change font size -->
-			<h3>Wind</h3>
-			<div id="pointer"><img src="images/wind-pointer.png" alt="wind pointer"></div>
-			<div id="windSpeed">5 mph</div>
-			<p><strong>Direction: </strong>SW</p>
-			<p><strong>Gusts: </strong>10-12mph</p>
-		</section>
-		<section id="summary" class="tile">
+				<h3>Temperature</h3>
+				<p id="currentTemp">40&deg; F</p>
+				<!-- make a list! -->
+				<p id="hot" class="hc">64&deg; F </p>
+				<p id="cold" class="hc">41&deg; F</p>
+				<p>Feels like 25&deg; F</p>
+			</section>
+			<section id="wind" class="tile">
+				<!-- change Wind from h3 to p? give it an id and change font size -->
+				<h3>Wind</h3>
+				<div id="pointer"><img src="images/wind-pointer.png" alt="wind pointer"></div>
+				<div id="windSpeed">5 mph</div>
+				<p><strong>Direction: </strong>SW</p>
+				<p><strong>Gusts: </strong>10-12mph</p>
+			</section>
+			<section id="summary" class="tile">
 				<h3>Rain</h3>
-				<img src="images/rain.jpg" alt="rain on glass" id="clear">
-		</section>
+				<picture>
+					<source srcset="images/rain.jpg" alt="rain on glass" class="big-thumbnail">
+					<img src="images/rain-new.jpg" alt="rain on glass" class="small-thumbnail">
+				</picture>
+			</section>
 		</div>
 		<section id="hourly" class="tile">
 			<h3>Hourly Forecast</h3>
