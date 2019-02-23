@@ -188,13 +188,10 @@ h1 {
 	.main {
 		line-height: 1.375;
 	}
-	.small-featured-image {
+	.featured-image {
 		margin: 0 1em 1em 0;
 		float: left;
 		width: 50%;
-	}
-	.large-featured-image{
-		display: none;
 	}
 	.featured-video {
 		float: left;
@@ -238,15 +235,5 @@ h1 {
 		max-width: 80%;
 		padding-right: 2em;
 		padding-left: 2em;
-	}
-
-	.large-featured-image{
-		margin: 0 1em 1em 0;
-		float: left;
-		width: 50%;
-	}
-
-	.small-featured-image{
-		display: none;
 	}
 }
