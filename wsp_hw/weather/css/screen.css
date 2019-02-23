@@ -54,7 +54,7 @@ header {
     position: relative;
 }
 
-#site-brand h2{
+#site-brand h2 {
     font-family: 'Sansita', sans-serif;
 }
 
@@ -144,12 +144,6 @@ body {
     text-align: center;
 }
 
-#summary img {
-    /* max-width: 100%? */
-    width: 300px;
-    padding-bottom: 5px;
-}
-
 footer {
     width: 100%;
     margin-top: 5px;
@@ -185,51 +179,58 @@ nav {
     position: fixed;
 }
 
-#wind{
+#wind {
     position: relative;
 }
 
 /* Section 3: Mobile first rules */
+#windSpeed {
+    font-size: 30px;
+    position: absolute;
+    top: 37%;
+    left: 45%;
+}
 
- #windSpeed {
-        font-size: 30px;
-        position: absolute;
-        top: 37%;
-        left: 45%;
+@media screen and (max-width: 799px) {
+    #large-thumbnail {
+        display: none;
     }
+}
+
 /*Section 4: Larger Screen rules*/
 @media screen and (min-width: 800px) {
 
     /* css for large screens goes here */
-    #windSpeed{
+    #windSpeed {
         position: absolute;
         top: 37%;
         left: 40%;
     }
+
+    #small-thumbnail {
+        display: none;
+    }
+
     #curWeather {
         display: flex;
         flex-direction: row;
         background-size: 1700px;
     }
 
-    .small-thumbnail{
-        display: none;
-    }
-
-    .tile{
+    .tile {
         flex-grow: 1;
     }
 
-    nav{
-       position: static; 
+    nav {
+        position: static;
     }
 
-    nav ul{
+    nav ul {
         margin: 0;
         padding-bottom: 5px;
     }
 
-    footer{
+    footer {
         margin-bottom: 0;
         padding: 5px;
     }
