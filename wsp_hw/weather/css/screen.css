@@ -144,6 +144,26 @@ body {
     text-align: center;
 }
 
+.clear{
+    background-image: url("/wsp_hw/weather/images/clouds-new.jpg");
+}
+
+.rainy{
+    background-image: url("/wsp_hw/weather/images/rain-new.jpg");
+}
+
+.cloudy{
+    background-image: url("/wsp_hw/weather/images/clouds-new.jpg");
+}
+
+.snow{
+    background-image: url("/wsp_hw/weather/images/snow-new.jpg");
+}
+
+.fog{
+    background-image: url("/wsp_hw//weather/images/snow-new.jpg");
+}
+
 footer {
     width: 100%;
     margin-top: 5px;
