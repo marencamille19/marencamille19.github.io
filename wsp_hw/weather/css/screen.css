@@ -183,19 +183,25 @@ nav {
     position: relative;
 }
 
+img{
+    max-width: 100%;
+}
+
 /* Section 3: Mobile first rules */
+
+
 #windSpeed {
     font-size: 30px;
     position: absolute;
     top: 37%;
     left: 45%;
+/* }
+@media screen and (max-width: 799px){
+.large{
+    display: none;
 }
+} */
 
-@media screen and (max-width: 799px) {
-    #large-thumbnail {
-        display: none;
-    }
-}
 
 /*Section 4: Larger Screen rules*/
 @media screen and (min-width: 800px) {
@@ -206,10 +212,10 @@ nav {
         top: 37%;
         left: 40%;
     }
-
-    #small-thumbnail {
+/* 
+    .small{
         display: none;
-    }
+    } */
 
     #curWeather {
         display: flex;

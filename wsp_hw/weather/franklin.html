@@ -48,9 +48,12 @@
 		</section>
 		<section id="summary" class="tile">
 				<h3>Rain</h3>
-					<img src="images/rain-new.jpg" alt="rain on glass" id="small-thumbnail">
-					<img src="images/rain.jpg" alt="rain on glass" id="large-thumbnail">	
-				</section>
+				<picture>
+					<source media="(max-width: 799px)" src="images/rain-new.jpg" class="small">
+					<source media="(min-width: 800px)" src="images/rain.jpg" class="large">	
+					<img src="images/rain-new.jpg" alt="rain rolling down glass">
+				</picture>	
+				</section>s
 		</div>
 		<section id="hourly" class="tile">
 			<h3>Hourly Forecast</h3>
