@@ -140,7 +140,7 @@ body {
     z-index: 100;
     margin: -.6em auto 0;
 }
-
+/* Wind direction rules */
 .n{
     transform: rotate(0deg);
 }
@@ -179,6 +179,7 @@ body {
     text-align: center;
 }
 
+/* summary image rules */
 .clear{
     background-image: url("/wsp_hw/weather/images/clouds-new.jpg");
 }
@@ -251,13 +252,6 @@ img{
     top: 37%;
     left: 45%;
 }
-/*
-@media screen and (max-width: 799px){
-.large{
-    display: none;
-}
-} */
-
 
 /*Section 4: Larger Screen rules*/
 @media screen and (min-width: 800px) {
@@ -268,10 +262,6 @@ img{
         top: 37%;
         left: 40%;
     }
-/* 
-    .small{
-        display: none;
-    } */
 
     #curWeather {
         display: flex;
