@@ -119,6 +119,6 @@ function changeSummaryImage(weather){
     
 }
 
-function convertMeters(){
-    
+function convertMeters(meters){
+    return meters * 3.28;
 }
