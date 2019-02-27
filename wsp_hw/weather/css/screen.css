@@ -139,10 +139,39 @@ body {
     background: no-repeat center/85% url("/wsp_hw/weather/images/wind-pointer.png");
     z-index: 100;
     margin: -.6em auto 0;
+}
+
+.n{
+    transform: rotate(0deg);
+}
+
+.ne{
+    transform: rotate(45deg);
+}
+
+.e{
+    transform: rotate(90deg);
+}
+
+.se{
+    transform: rotate(135deg);
+}
+
+.s{
+    transform: rotate(180deg);
+}
+
+.sw{
+    transform: rotate(225deg);
+}
+
+.w{
     transform: rotate(270deg);
 }
 
-
+.nw{
+    transform: rotate(315deg);
+}
 
 #curWeather {
     background-image: url(/wsp_hw/weather/images/rain-new.jpg);
