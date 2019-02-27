@@ -84,13 +84,13 @@ function getCondition(phrase) {
         case "Cloudy":
         case "cloudy":
         case "partly cloudy":
-        input = "cloudy";
+            input = "cloudy";
             break;
         case "Rainy":
         case "rainy":
         case "Wet Weather":
         case "wet weather":
-            input =  "rainy";
+            input = "rainy";
             break;
         case "Clear":
         case "clear":
@@ -115,10 +115,10 @@ function getCondition(phrase) {
     }
 }
 
-function changeSummaryImage(weather){
+function changeSummaryImage(weather) {
     
 }
 
-function convertMeters(meters){
+function convertMeters(meters) {
     return meters * 3.28;
 }
