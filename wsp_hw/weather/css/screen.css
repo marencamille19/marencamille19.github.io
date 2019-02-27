@@ -142,6 +142,8 @@ body {
     transform: rotate(270deg);
 }
 
+
+
 #curWeather {
     background-image: url(/wsp_hw/weather/images/rain-new.jpg);
     background-size: cover;
