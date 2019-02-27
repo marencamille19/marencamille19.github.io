@@ -1,7 +1,7 @@
 /* *************************************
  *  Weather Site JavaScript Functions
  ************************************* */
-//console.log('My javascript is being read.');
+
 const temp = 31;
 const speed = 5;
 
@@ -16,18 +16,39 @@ const weather = "Partly Cloudy";
 getCondition(weather);
 //calculate the Windchill
 function buildWC(speed, temp) {
-    const feelTemp = document.getElementById('feels-like');
+    const feelsLike = document.getElementById('feelsLike');
     // Compute the windchill
     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
     console.log(wc);
-    wc = (wc > temp) ? temp : wc;
+
     wc = Math.floor(wc);
 
-    wc = 'Feels like ' + wc + '&deg;F';
-    feelsLike.innerHTML = wc;
+    wc = (wc > temp)?temp:wc;
 
     console.log(wc);
+    wc = 'Feels like ' + wc + '&deg;F';
+    feelsLike.innerHTML = wc;
 }
+
+//  // Calculate the Windchill
+//  function buildWC(speed, temp) {
+//     const feelTemp = document.getElementById('feelTemp');
+   
+//     // Compute the windchill
+//     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
+//     console.log(wc);
+   
+//     // Round the answer down to integer
+//     wc = Math.floor(wc);
+   
+//     // If chill is greater than temp, return the temp
+//     wc = (wc > temp)?temp:wc;
+   
+//     // Display the windchill
+//     console.log(wc);
+//     // wc = 'Feels like '+wc+'°F';
+//     feelTemp.innerHTML = wc;
+//     }
 
 // Wind Dial Function
 function windDial(direction) {
