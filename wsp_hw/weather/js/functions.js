@@ -1,0 +1,13 @@
+getCondition() {
+
+}
+    
+changeSummaryImage(){
+
+}
+
+convertMeters(){
+
+}
+
+
