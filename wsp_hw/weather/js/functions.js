@@ -116,7 +116,7 @@ function getCondition(phrase) {
 }
 
 function changeSummaryImage(weather) {
-    
+
 }
 
 function convertMeters(meters) {
