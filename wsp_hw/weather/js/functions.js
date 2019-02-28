@@ -72,7 +72,7 @@ function windDial(direction) {
     }
 }
 
-const weather = getCondition("rainy");
+const weather = getCondition("snow");
 //gets condition of weather
 function getCondition(phrase) {
     let input = phrase;
@@ -116,7 +116,7 @@ function getCondition(phrase) {
 
 //changes the weather tile image
 function changeSummaryImage(weather) {
-    const weatherImage = weather;
+    const weatherImages = weather;
     switch (weather) {
         case "cloudy":
             weatherImage.setAttribute("class", "cloudy");
@@ -136,10 +136,14 @@ function changeSummaryImage(weather) {
     }
 }
 
-
 changeSummaryImage(weather);
+
+
+let meters = document.getElementById("elevation").innerText;
+elevation.innerHTML = convertMeters(meters);
 
 //converts from feet to meters
 function convertMeters(meters) {
-    return meters * 3.28;
+    let feet = 0;
+    return feet = Math.floor(meters * 3.28);
 }
