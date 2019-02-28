@@ -241,6 +241,7 @@ img{
 
 
 /* summary image rules for smaller screens*/
+@media screen and (max-width: 799px){
 .clear{
     background-image: url("/wsp_hw/weather/images/clear-new.jpg");
 }
@@ -260,7 +261,7 @@ img{
 .fog{
     background-image: url("/wsp_hw//weather/images/fog-new.jpg");
 }
-
+}
 /*Section 4: Larger Screen rules*/
 @media screen and (min-width: 800px) {
 
@@ -295,23 +296,23 @@ img{
         padding: 5px;
     }
 
-    .clearBig{
+    .clear{
         background-image: url("/wsp_hw/weather/images/clear.jpg");
     }
     
-    .rainyBig{
+    .rainy{
         background-image: url("/wsp_hw/weather/images/rain.jpg");
     }
     
-    .cloudyBig{
+    .cloudy{
         background-image: url("/wsp_hw/weather/images/clouds.jpg");
     }
     
-    .snowBig{
+    .snow{
         background-image: url("/wsp_hw/weather/images/snow.jpg");
     }
     
-    .fogBig{
+    .fog{
         background-image: url("/wsp_hw//weather/images/fog.jpg");
     }
 }
