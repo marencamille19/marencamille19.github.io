@@ -179,27 +179,6 @@ body {
     text-align: center;
 }
 
-/* summary image rules */
-.clear{
-    background-image: url("/wsp_hw/weather/images/clouds-new.jpg");
-}
-
-.rainy{
-    background-image: url("/wsp_hw/weather/images/rain-new.jpg");
-}
-
-.cloudy{
-    background-image: url("/wsp_hw/weather/images/clouds-new.jpg");
-}
-
-.snow{
-    background-image: url("/wsp_hw/weather/images/snow-new.jpg");
-}
-
-.fog{
-    background-image: url("/wsp_hw//weather/images/snow-new.jpg");
-}
-
 footer {
     width: 100%;
     margin-top: 5px;
@@ -253,6 +232,27 @@ img{
     left: 45%;
 }
 
+/* summary image rules for smaller screens*/
+.clear{
+    background-image: url("/wsp_hw/weather/images/clouds-new.jpg");
+}
+
+.rainy{
+    background-image: url("/wsp_hw/weather/images/rain-new.jpg");
+}
+
+.cloudy{
+    background-image: url("/wsp_hw/weather/images/clouds-new.jpg");
+}
+
+.snow{
+    background-image: url("/wsp_hw/weather/images/snow-new.jpg");
+}
+
+.fog{
+    background-image: url("/wsp_hw//weather/images/fog-new.jpg");
+}
+
 /*Section 4: Larger Screen rules*/
 @media screen and (min-width: 800px) {
 
@@ -285,5 +285,25 @@ img{
     footer {
         margin-bottom: 0;
         padding: 5px;
+    }
+
+    .clearBig{
+        background-image: url("/wsp_hw/weather/images/clouds.jpg");
+    }
+    
+    .rainyBig{
+        background-image: url("/wsp_hw/weather/images/rain.jpg");
+    }
+    
+    .cloudyBig{
+        background-image: url("/wsp_hw/weather/images/clouds.jpg");
+    }
+    
+    .snowBig{
+        background-image: url("/wsp_hw/weather/images/snow.jpg");
+    }
+    
+    .fogBig{
+        background-image: url("/wsp_hw//weather/images/fog.jpg");
     }
 }

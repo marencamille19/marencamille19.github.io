@@ -76,7 +76,7 @@ function windDial(direction) {
 }
 
 let weatherInput = "rainy";
-const weather = getCondition(weatherInput);
+const weatherH = getCondition(weatherInput);
 
 function getCondition(phrase) {
     let input = phrase;
@@ -114,6 +114,8 @@ function getCondition(phrase) {
             input = "fog";
             break;
     }
+    console.log(input);
+    return input;
 }
 
 function changeSummaryImage(weather) {
