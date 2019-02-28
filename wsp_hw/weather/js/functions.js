@@ -72,7 +72,7 @@ function windDial(direction) {
     }
 }
 
-const weather = getCondition("snow");
+const weather = getCondition("Wet Weather");
 //gets condition of weather
 function getCondition(phrase) {
     let input = phrase;
@@ -108,7 +108,7 @@ function getCondition(phrase) {
         case "fog":
         case "Fog":
             input = "fog";
-            break;
+            break; 
     }
     console.log(input);
     return input;
