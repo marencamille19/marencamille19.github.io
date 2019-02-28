@@ -7,13 +7,10 @@ const speed = 5;
 
 buildWC(speed, temp);
 
-const direction = "NNE";
+const direction = "SW";
 
 windDial(direction);
 
-const weather = "Partly Cloudy";
-
-getCondition(weather);
 //calculate the Windchill
 function buildWC(speed, temp) {
     const feelsLike = document.getElementById('feelsLike');
@@ -75,8 +72,7 @@ function windDial(direction) {
     }
 }
 
-let weatherInput = "rainy";
-const weatherH = getCondition(weatherInput);
+const weatherInput = getCondition("rainy");
 
 function getCondition(phrase) {
     let input = phrase;
@@ -118,9 +114,29 @@ function getCondition(phrase) {
     return input;
 }
 
-function changeSummaryImage(weather) {
-    
+function changeSummaryImage(test) {
+    const weatherImage = weatherInput;
+   switch(test){ 
+    case "cloudy":
+    weatherImage.setAttribute("class", "cloudy");
+    break;
+    case "rainy":
+    weatherImage.setAttribute("class", "rainy");
+    break;
+    case "clear":
+    weatherImage.setAttribute("class", "clear");
+    break;
+    case "snow":
+    weatherImage.setAttribute("class", "snow");
+    break;
+    case "fog":
+    weatherImage.setAttribute("class", "fog");
+    break;
+    }
 }
+
+let test = 'fog';
+changeSummaryImage(test);
 
 function convertMeters(meters) {
     return meters * 3.28;
