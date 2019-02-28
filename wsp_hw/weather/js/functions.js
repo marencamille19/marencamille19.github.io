@@ -14,13 +14,13 @@ windDial(direction);
 //calculate the Windchill
 function buildWC(speed, temp) {
     const feelsLike = document.getElementById('feelsLike');
-     // Compute the windchill
+    // Compute the windchill
     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
     console.log(wc);
 
     wc = Math.floor(wc);
 
-    wc = (wc > temp)?temp:wc;
+    wc = (wc > temp) ? temp : wc;
 
     console.log(wc);
     wc = 'Feels like ' + wc + '&deg;F';
@@ -117,22 +117,22 @@ function getCondition(phrase) {
 //changes the weather tile image
 function changeSummaryImage(weather) {
     const weatherImage = weather;
-    switch(test){ 
-    case "cloudy":
-    weatherImage.setAttribute("class", "cloudy");
-    break;
-    case "rainy":
-    weatherImage.setAttribute("class", "rainy");
-    break;
-    case "clear":
-    weatherImage.setAttribute("class", "clear");
-    break;
-    case "snow":
-    weatherImage.setAttribute("class", "snow");
-    break;
-    case "fog":
-    weatherImage.setAttribute("class", "fog");
-    break;
+    switch (weather) {
+        case "cloudy":
+            weatherImage.setAttribute("class", "cloudy");
+            break;
+        case "rainy":
+            weatherImage.setAttribute("class", "rainy");
+            break;
+        case "clear":
+            weatherImage.setAttribute("class", "clear");
+            break;
+        case "snow":
+            weatherImage.setAttribute("class", "snow");
+            break;
+        case "fog":
+            weatherImage.setAttribute("class", "fog");
+            break;
     }
 }
 
