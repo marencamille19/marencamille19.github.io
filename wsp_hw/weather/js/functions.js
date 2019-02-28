@@ -72,7 +72,7 @@ function windDial(direction) {
     }
 }
 
-const weather = getCondition("clear");
+const weather = getCondition("rainy");
 //gets condition of weather
 function getCondition(phrase) {
     let input = phrase;
@@ -116,8 +116,8 @@ function getCondition(phrase) {
 
 //changes the weather tile image
 function changeSummaryImage(weather) {
-    const weatherImage = weatherInput;
-   switch(test){ 
+    const weatherImage = weather;
+    switch(test){ 
     case "cloudy":
     weatherImage.setAttribute("class", "cloudy");
     break;
@@ -136,7 +136,7 @@ function changeSummaryImage(weather) {
     }
 }
 
-let weather = "clear";
+
 changeSummaryImage(weather);
 
 //converts from feet to meters
