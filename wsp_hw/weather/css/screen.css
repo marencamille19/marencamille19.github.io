@@ -236,7 +236,7 @@ img{
     font-size: 30px;
     position: absolute;
     top: 33%;
-    left: 38%;
+    left: 45%;
 }
 
 
@@ -275,7 +275,7 @@ img{
     #curWeather {
         display: flex;
         flex-direction: row;
-        background-size: 1700px;
+        background-size: cover;
     }
 
     .tile {
