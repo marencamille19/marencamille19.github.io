@@ -87,6 +87,7 @@ function getCondition(phrase) {
         case "rainy":
         case "Wet Weather":
         case "wet weather":
+        case "Thunderstorms":
             input = "rainy";
             break;
         case "Clear":
