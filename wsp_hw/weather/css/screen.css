@@ -227,6 +227,8 @@ img{
     width: 300px;
     margin: -.6em auto 0;
     margin-top: 10px;
+    margin-bottom: 15px;
+    background-size: cover;
 }
 
 /* Section 3: Mobile first rules */
