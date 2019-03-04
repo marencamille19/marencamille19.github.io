@@ -174,7 +174,6 @@ body {
 }
 
 #curWeather {
-    background-image: url(/wsp_hw/weather/images/rain-new.jpg);
     background-size: cover;
     text-align: center;
 }

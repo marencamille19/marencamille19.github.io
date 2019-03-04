@@ -72,7 +72,7 @@ function windDial(direction) {
     }
 }
 
-const weather = getCondition("snow");
+const weather = getCondition("cloudy");
 //gets condition of weather
 function getCondition(phrase) {
     let input = phrase;
@@ -122,18 +122,28 @@ function changeSummaryImage(weather) {
     switch (weather) {
         case "cloudy":
             weatherImage.setAttribute("class", "cloudy");
+            curWeather.setAttribute("class", "cloudy");
+            document.getElementById("weatherTitle").innerText = "Clouds";
             break;
         case "rainy":
             weatherImage.setAttribute("class", "rainy");
+            curWeather.setAttribute("class", "rain");
+            document.getElementById("weatherTitle").innerText = "Rain";
             break;
         case "clear":
             weatherImage.setAttribute("class", "clear");
+            curWeather.setAttribute("class", "clear");
+            document.getElementById("weatherTitle").innerText = "Clear";
             break;
         case "snow":
             weatherImage.setAttribute("class", "snow");
+            curWeather.setAttribute("class", "snow");
+            document.getElementById("weatherTitle").innerText = "Snow";
             break;
         case "fog":
             weatherImage.setAttribute("class", "fog");
+            curWeather.setAttribute("class", "fog");
+            document.getElementById("weatherTitle").innerText = "Fog";
             break;
     }
 }
