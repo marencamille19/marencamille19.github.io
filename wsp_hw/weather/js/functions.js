@@ -72,7 +72,7 @@ function windDial(direction) {
     }
 }
 
-const weather = getCondition("cloudy");
+const weather = getCondition("Cloudy");
 //gets condition of weather
 function getCondition(phrase) {
     let input = phrase;
@@ -81,6 +81,8 @@ function getCondition(phrase) {
         case "Cloudy":
         case "cloudy":
         case "partly cloudy":
+        case "clouds":
+        case "Clouds":
             input = "cloudy";
             break;
         case "Rainy":
@@ -127,7 +129,7 @@ function changeSummaryImage(weather) {
             break;
         case "rainy":
             weatherImage.setAttribute("class", "rainy");
-            curWeather.setAttribute("class", "rain");
+            curWeather.setAttribute("class", "rainy");
             document.getElementById("weatherTitle").innerText = "Rain";
             break;
         case "clear":
