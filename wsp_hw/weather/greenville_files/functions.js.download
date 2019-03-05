@@ -178,16 +178,16 @@ function format_time(hour){
 }
 
 // Build the hourly temperature list
-function buildHourlyData(nextHour,hourly) {
+function buildHourlyData(nextHour,hourlyTemps) {
     // Data comes from a JavaScript object of hourly temp name - value pairs
     // Next hour should have a value between 0-23
     // The hourlyTemps variable holds an array of temperatures
     // Line 8 builds a list item showing the time for the next hour 
     // and then the first element (value in index 0) from the hourly temps array
-     let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourly[0] + '&deg;F</li>';
+     let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemps[0] + '&deg;F</li>';
      // Build the remaining list items using a for loop
-     for (let i = 1, x = hourly.length; i < x; i++) {
-      hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourly[i] + '&deg;F</li>';
+     for (let i = 1, x = hourlyTemps.length; i < x; i++) {
+      hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemps[i] + '&deg;F</li>';
      }
      console.log('HourlyList is: ' +hourlyListItems);
      return hourlyListItems;
@@ -197,16 +197,4 @@ function buildHourlyData(nextHour,hourly) {
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
 
-fetch("/weather.json")
- .then(function(response) {
-   if(response.ok){
-     return response.json();
-   }
-   throw new ERROR('Network response was not OK.');
- })
- .then(function(data){
-   ... do something with the JavaScript object ...
- })
- .catch(function(error){
-console.log('There was a fetch problem: ', error.message);
- })
+
