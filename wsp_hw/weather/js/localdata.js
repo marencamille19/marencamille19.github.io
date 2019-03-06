@@ -84,8 +84,9 @@ function fetchData(weatherURL){
     // Set the current conditions information
     document.getElementById("weatherTitle").innerHTML = summary;
     //document.getElementById("precip").innerHTML = precip;
+    
     // Set the hourly temperature information
-
+    document.getElementById("hourly").innerHTML = hourly;
 
     // Change the status of the containers
     pageContent.setAttribute('class', ''); // removes the hide class
