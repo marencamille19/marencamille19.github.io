@@ -71,8 +71,8 @@ function fetchData(weatherURL){
 
 
     // Change the status of the containers
-    contentContainer.setAttribute('class', ''); // removes the hide class
-    statusContainer.setAttribute('class', 'hide'); // hides the status container
+    page-content.setAttribute('class', ''); // removes the hide class
+    status.setAttribute('class', 'hide'); // hides the status container
   })
   .catch(function(error){
   console.log('There was a fetch problem: ', error.message);
