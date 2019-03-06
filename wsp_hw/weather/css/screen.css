@@ -178,6 +178,10 @@ body {
     text-align: center;
 }
 
+#curTemp{
+    font-size: 80px;
+}
+
 footer {
     width: 100%;
     margin-top: 5px;
@@ -234,16 +238,17 @@ img{
     display: none;
 }
 
+#gusts{
+    display: in-line;
+}
 /* Section 3: Mobile first rules */
 
 
 #windSpeed {
     font-size: 25px;
-    position: absolute;
-    top: 33%;
-    left: 45%;
+    margin-top: -90px;
+    margin-bottom: 70px;
 }
-
 
 /* summary image rules for smaller screens*/
 @media screen and (max-width: 799px){
@@ -271,12 +276,6 @@ img{
 @media screen and (min-width: 800px) {
 
     /* css for large screens goes here */
-    #windSpeed {
-        position: absolute;
-        top: 32%;
-        left: 40%;
-    }
-
     #curWeather {
         display: flex;
         flex-direction: row;

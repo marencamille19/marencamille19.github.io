@@ -30,15 +30,28 @@ function fetchData(weatherURL){
     console.log('fullName is: '+fullName);
 
     // Get the temperature data
-
-
+    let curTemp = g.Temp;
+    let high = g.High;
+    let low = g.Low;
+    //See if it worked!! :)
+    console.log("Temp info is Current Temp: " + curTemp + ", High: " + high + ", Low: " + low);
+    
     // Get the wind data 
-
-
+    let wind = g.Wind;
+    let direction = g.Direction;
+    let gusts = g.Gusts;
+    //See if it worked!! :0)
+    console.log("Wind info is Wind speed: " + wind + ", Direction of wind: " + direction + ", Speed of gusts: " + gusts);
+    
     // Get the current conditions
-
-
+    let summary = g.Summary;
+    let precip = g.Precip;
+    //See if it worked!! :)
+    console.log("Current Condition is Current weather: " + summary + ", Precipitation: " + precip);
+    
     // Get the hourly data 
+    let hourly = g.Hourly;
+    console.log("Hourly data: " + hourly);
 
     // ************ Display the content ******************************
     // Set the title with the location name at the first
@@ -59,14 +72,18 @@ function fetchData(weatherURL){
 
 
     // Set the temperature information
-
-
+    document.getElementById("curTemp").innerHTML = curTemp + "&deg;";
+    document.getElementById("hot").innerHTML = high + "&deg;";
+    document.getElementById("cold").innerHTML = low + "&deg;";
+    
     // Set the wind information
-
+    document.getElementById("windSpeed").innerHTML = wind + " mph";
+    document.getElementById("gusts").innerHTML = gusts + " mph";
+    document.getElementById("direction").innerHTML = direction;
 
     // Set the current conditions information
-
-
+    document.getElementById("weatherTitle").innerHTML = summary;
+    //document.getElementById("precip").innerHTML = precip;
     // Set the hourly temperature information
 
 
