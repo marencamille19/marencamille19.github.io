@@ -1,6 +1,6 @@
+'use strict';
 
-
-let weatherURL = "../wsp_hw/weather.json";
+let weatherURL = "/wsp_hw/weather/js/weather.json";
 fetchData(weatherURL);
 
 function fetchData(weatherURL){
@@ -17,7 +17,7 @@ function fetchData(weatherURL){
     console.log(data);
     // data is the full JavaScript object, but we only want the greenville part
     // shorten the variable and focus only on the data we want to reduce typing
-    let g = data[Greenville];
+    let g = data[cityName];
 
     // ************ Get the content ******************************
 
@@ -71,11 +71,11 @@ function fetchData(weatherURL){
 
 
     // Change the status of the containers
-    page-content.setAttribute('class', ''); // removes the hide class
-    status.setAttribute('class', 'hide'); // hides the status container
+    pageContent.setAttribute('class', ''); // removes the hide class
+    statusMessage.setAttribute('class', 'hide'); // hides the status container
   })
   .catch(function(error){
   console.log('There was a fetch problem: ', error.message);
-  status.innerHTML = 'Sorry, the data could not be processed.';
+  statusMessage.innerHTML = 'Sorry, the data could not be processed.';
   })
 }

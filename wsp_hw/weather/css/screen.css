@@ -37,7 +37,7 @@ header {
     margin-top: 0px;
 }
 
-#page-header {
+#pageHeader {
     display: flex;
     justify-content: flex-start;
 }
@@ -49,12 +49,12 @@ header {
     margin-top: 0px;
 }
 
-#site-brand {
+#siteBrand {
     font-size: 45px;
     position: relative;
 }
 
-#site-brand h2 {
+#siteBrand h2 {
     font-family: 'Sansita', sans-serif;
 }
 
@@ -96,7 +96,7 @@ nav ul li a {
     color: white;
 }
 
-#page-content ul {
+#pageContent ul {
     display: flex;
 }
 
