@@ -17,7 +17,7 @@ function fetchData(weatherURL){
     console.log(data);
     // data is the full JavaScript object, but we only want the greenville part
     // shorten the variable and focus only on the data we want to reduce typing
-    let g = data[cityName];
+    let g = data[Greenville];
 
     // ************ Get the content ******************************
 
@@ -43,7 +43,7 @@ function fetchData(weatherURL){
     // ************ Display the content ******************************
     // Set the title with the location name at the first
     // Gets the title element so it can be worked with
-    let pageTitle = document.getElementById('page-title');
+    let pageTitle = document.getElementById('pageTitle');
     // Create a text node containing the full name 
     let fullNameNode = document.createTextNode(fullName);
     // inserts the fullName value before any other content that might exist
@@ -53,7 +53,7 @@ function fetchData(weatherURL){
 
     // Set the Location information
     // Get the h1 to display the city location
-    let contentHeading = document.getElementById('contentHeading');
+    let contentHeading = document.getElementById('page-header');
     contentHeading.innerHTML = fullName;
     // The h1 in main h1 should now say "Greenville, SC"
 
