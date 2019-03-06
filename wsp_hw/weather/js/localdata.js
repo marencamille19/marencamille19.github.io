@@ -76,9 +76,9 @@ function fetchData(weatherURL){
 
 
     // Set the temperature information
-    document.getElementById("curTemp").innerHTML = curTemp + "&deg;";
-    document.getElementById("hot").innerHTML = high + "&deg;";
-    document.getElementById("cold").innerHTML = low + "&deg;";
+    document.getElementById("curTemp").innerHTML = curTemp + "&deg; F";
+    document.getElementById("hot").innerHTML = high + "&deg; F";
+    document.getElementById("cold").innerHTML = low + "&deg; F";
     
     // Set the wind information
     document.getElementById("windSpeed").innerHTML = wind + " mph";
@@ -90,7 +90,7 @@ function fetchData(weatherURL){
     //document.getElementById("precip").innerHTML = precip;
     
     // Set the hourly temperature information
-    document.getElementById("hourly").innerHTML = hourly;
+    document.getElementById("hourlyData").innerHTML = hourly;
 
     // Change the status of the containers
     pageContent.setAttribute('class', ''); // removes the hide class

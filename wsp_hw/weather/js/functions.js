@@ -2,14 +2,11 @@
  *  Weather Site JavaScript Functions
  ************************************* */
 
-const temp = 31;
-const speed = 5;
+let temp = 31;
+let  speed = 5;
 
 buildWC(speed, temp);
 
-const direction = "SW";
-
-windDial(direction);
 
 //calculate the Windchill
 function buildWC(speed, temp) {
@@ -26,6 +23,10 @@ function buildWC(speed, temp) {
     wc = 'Feels like ' + wc + '&deg;F';
     feelsLike.innerHTML = wc;
 }
+
+const direction = "SW";
+
+windDial(direction);
 
 // Wind Dial Function
 function windDial(direction) {
@@ -72,7 +73,8 @@ function windDial(direction) {
     }
 }
 
-const weather = getCondition("Cloudy");
+let weather = document.getElementById("weatherTitle").innerHTML;
+
 //gets condition of weather
 function getCondition(phrase) {
     let input = phrase;
