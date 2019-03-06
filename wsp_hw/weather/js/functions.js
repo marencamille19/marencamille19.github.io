@@ -197,6 +197,7 @@ function buildHourlyData(nextHour,hourly) {
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
 
+console.log('')
 fetch("/wsp_hw/weather/js/weather.json")
  .then(function(response) {
    if(response.ok){

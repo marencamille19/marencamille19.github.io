@@ -180,6 +180,7 @@ body {
 
 #curTemp{
     font-size: 80px;
+    margin: 15px;
 }
 
 footer {
