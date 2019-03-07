@@ -1,7 +1,7 @@
 'use strict';
 let pageNav = document.getElementById('pageNav');
-let statusContainer = document.getElementById('statusMessage');
-let contentContainer = document.getElementById('pageContent');
+let statusMessage = document.getElementById('statusMessage');
+let pageContent = document.getElementById('pageContent');
 
 
 let weatherURL = "/wsp_hw/weather/js/weather.json";
