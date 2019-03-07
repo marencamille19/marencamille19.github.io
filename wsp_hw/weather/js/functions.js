@@ -199,7 +199,7 @@ function buildHourlyData(nextHour,hourly) {
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
 let hourly = document.getElementById("hourlyData").innerHTML;
-let hours = buildHourlyData(nextHour, hourly); 
+let hours = buildHourlyData(nextHour, hourly);   
 
 
 console.log('')
