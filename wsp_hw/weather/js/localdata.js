@@ -54,8 +54,8 @@ function fetchData(weatherURL){
     console.log("Current Condition is Current weather: " + summary + ", Precipitation: " + precip);
     
     // Get the hourly data 
-    let hourly = g.Hourly;
-    console.log("Hourly data: " + hourly);
+    let hourlyData = g.Hourly;
+    console.log("Hourly data: " + hourlyData);
 
     // ************ Display the content ******************************
     // Set the title with the location name at the first
@@ -94,7 +94,10 @@ function fetchData(weatherURL){
     changeSummaryImage(weather);
     
     // Set the hourly temperature information
-    document.getElementById("hourlyData").innerHTML = hourly;
+    let date = new Date(); 
+    let nextHour = date.getHours() + 1;
+    let hours = buildHourlyData(nextHour, hourlyData);
+    let hourlyTemp = document.getElementById("hourlyData").innerHTML;
 
     // Change the status of the containers
     pageContent.setAttribute('class', ''); // removes the hide class

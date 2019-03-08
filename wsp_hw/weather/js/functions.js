@@ -1,6 +1,7 @@
 /* *************************************
  *  Weather Site JavaScript Functions
  ************************************* */
+
 //calculate the Windchill
 function buildWC(speed, temp) {
     const feelsLike = document.getElementById('feelsLike');
@@ -165,7 +166,7 @@ function format_time(hour){
 }
 
 // Build the hourly temperature list
-function buildHourlyData(nextHour,hourly) {
+function buildHourlyData(nextHour, hourlyTemp) {
     // Data comes from a JavaScript object of hourly temp name - value pairs
     // Next hour should have a value between 0-23
     // The hourlyTemps variable holds an array of temperatures
@@ -183,9 +184,10 @@ function buildHourlyData(nextHour,hourly) {
 // Get the next hour based on the current time
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
-let hourly = document.getElementById("hourlyData").innerHTML;
-let hours = buildHourlyData(nextHour, hourly); 
 
+
+// let meters = document.getElementById("elevation").innerText;
+// elevation.innerHTML = convertMeters(meters);
 
 
 
