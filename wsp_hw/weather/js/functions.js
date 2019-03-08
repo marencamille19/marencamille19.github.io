@@ -2,11 +2,10 @@
  *  Weather Site JavaScript Functions
  ************************************* */
 
-let temp = 31;
-let  speed = 5;
+let temp = document.getElementById("currentTemp").innerHTML;
+let  speed = document.getElementById("speed").innerHTML;
 
 buildWC(speed, temp);
-
 
 //calculate the Windchill
 function buildWC(speed, temp) {
@@ -24,7 +23,7 @@ function buildWC(speed, temp) {
     feelsLike.innerHTML = wc;
 }
 
-const direction = "SW";
+let direction = document.getElementById("direction").innerHTML;
 
 windDial(direction);
 
@@ -159,7 +158,7 @@ let meters = document.getElementById("elevation").innerText;
 elevation.innerHTML = convertMeters(meters);
 
 //converts from feet to meters
-function convertMeters(meters) {
++function convertMeters(meters) {
     let feet = 0;
     return feet = Math.floor(meters * 3.28);
 }
