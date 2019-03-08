@@ -158,7 +158,7 @@ let meters = document.getElementById("elevation").innerText;
 elevation.innerHTML = convertMeters(meters);
 
 //converts from feet to meters
-+function convertMeters(meters) {
+function convertMeters(meters) {
     let feet = 0;
     return feet = Math.floor(meters * 3.28);
 }
