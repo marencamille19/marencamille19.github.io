@@ -197,8 +197,10 @@ function buildHourlyData(nextHour,hourly) {
 // Get the next hour based on the current time
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
-let hourly = document.getElementById("hourlyData").innerHTML;
-let hours = buildHourlyData(nextHour, hourly);   
+let hourly = document.getElementById("hourlyData").innerText;
+let hours = buildHourlyData(nextHour, hourly); 
+
+
 
 
 console.log('')
