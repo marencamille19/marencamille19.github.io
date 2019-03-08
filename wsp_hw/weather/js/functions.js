@@ -1,12 +1,6 @@
 /* *************************************
  *  Weather Site JavaScript Functions
  ************************************* */
-
-let temp = document.getElementById("currentTemp").innerHTML;
-let speed = document.getElementById("speed").innerHTML;
-
-buildWC(speed, temp);
-
 //calculate the Windchill
 function buildWC(speed, temp) {
     const feelsLike = document.getElementById('feelsLike');
@@ -20,12 +14,9 @@ function buildWC(speed, temp) {
 
     console.log(wc);
     wc = 'Feels like ' + wc + '&deg;F';
-    feelsLike.innerHTML = wc;
+    // feelsLike.innerHTML = wc;
+    return wc;
 }
-
-let direction = document.getElementById("direction").innerHTML;
-
-windDial(direction);
 
 // Wind Dial Function
 function windDial(direction) {
@@ -72,7 +63,6 @@ function windDial(direction) {
     }
 }
 
-let weather = document.getElementById("weatherTitle").innerHTML;
 
 //gets condition of weather
 function getCondition(phrase) {
@@ -151,12 +141,8 @@ function changeSummaryImage(weather) {
     }
 }
 
-changeSummaryImage(weather);
-
-
 let meters = document.getElementById("elevation").innerText;
 elevation.innerHTML = convertMeters(meters);
-
 //converts from feet to meters
 function convertMeters(meters) {
     let feet = 0;
@@ -197,7 +183,7 @@ function buildHourlyData(nextHour,hourly) {
 // Get the next hour based on the current time
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
-
+let hourly = document.getElementById("hourlyData").innerHTML;
 let hours = buildHourlyData(nextHour, hourly); 
 
 

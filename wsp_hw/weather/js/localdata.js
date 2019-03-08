@@ -79,15 +79,19 @@ function fetchData(weatherURL){
     document.getElementById("curTemp").innerHTML = curTemp + "&deg; F";
     document.getElementById("hot").innerHTML = high + "&deg; F";
     document.getElementById("cold").innerHTML = low + "&deg; F";
+    document.getElementById("feelsLike").innerHTML = buildWC(wind, curTemp);
     
     // Set the wind information
     document.getElementById("windSpeed").innerHTML = wind + " mph";
     document.getElementById("gusts").innerHTML = gusts + " mph";
     document.getElementById("direction").innerHTML = direction;
+    windDial(direction);
 
     // Set the current conditions information
     document.getElementById("weatherTitle").innerHTML = summary;
     //document.getElementById("precip").innerHTML = precip;
+    let weather = document.getElementById("weatherTitle").innerHTML;
+    changeSummaryImage(weather);
     
     // Set the hourly temperature information
     document.getElementById("hourlyData").innerHTML = hourly;
