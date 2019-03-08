@@ -7,6 +7,7 @@ let pageContent = document.getElementById('pageContent');
 let weatherURL = "/wsp_hw/weather/js/weather.json";
 fetchData(weatherURL);
 
+
 function fetchData(weatherURL){
   let cityName = 'Greenville'; // The data we want from the weather.json file
   fetch(weatherURL)
@@ -23,15 +24,21 @@ function fetchData(weatherURL){
     // shorten the variable and focus only on the data we want to reduce typing
     let g = data[cityName];
 
+ 
+
     // ************ Get the content ******************************
 
     // Get the location data
     let locName = g.City;
     let locState = g.State;
+
+  
     // Put them together
     let fullName = locName+', '+locState;
+ 
     // See if it worked
     console.log('fullName is: '+fullName);
+
 
     // Get the temperature data
     let curTemp = g.Temp;

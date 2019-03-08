@@ -172,10 +172,10 @@ function buildHourlyData(nextHour, hourlyTemp) {
     // The hourlyTemps variable holds an array of temperatures
     // Line 8 builds a list item showing the time for the next hour 
     // and then the first element (value in index 0) from the hourly temps array
-     let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourly[0] + '&deg;F</li>';
+     let hourlyListItems = '<li>' + format_time(nextHour) + ': ' + hourlyTemp[0] + '&deg;F | </li>';
      // Build the remaining list items using a for loop
-     for (let i = 1, x = hourly.length; i < x; i++) {
-      hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourly[i] + '&deg;F</li>';
+     for (let i = 1, x = hourlyTemp.length; i < x; i++) {
+      hourlyListItems += '<li>' + format_time(nextHour+i) + ': ' + hourlyTemp[i] + '&deg;F | </li>';
      }
      console.log('HourlyList is: ' +hourlyListItems);
      return hourlyListItems;
@@ -184,12 +184,6 @@ function buildHourlyData(nextHour, hourlyTemp) {
 // Get the next hour based on the current time
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
-
-
-// let meters = document.getElementById("elevation").innerText;
-// elevation.innerHTML = convertMeters(meters);
-
-
 
 console.log('')
 fetch("/wsp_hw/weather/js/weather.json")
