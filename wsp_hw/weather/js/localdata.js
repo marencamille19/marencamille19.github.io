@@ -96,9 +96,8 @@ function fetchData(weatherURL){
     // Set the hourly temperature information
     let date = new Date(); 
     let nextHour = date.getHours() + 1;
-    let hours = buildHourlyData(nextHour, hourlyData);
-    let hourlyTemp = document.getElementById("hourlyData").innerHTML;
-
+    hourlyTemp.innerHTML = buildHourlyData(nextHour, hourlyData);
+    
     // Change the status of the containers
     pageContent.setAttribute('class', ''); // removes the hide class
     statusMessage.setAttribute('class', 'hide'); // hides the status container
