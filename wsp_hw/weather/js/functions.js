@@ -3,7 +3,7 @@
  ************************************* */
 
 let temp = document.getElementById("currentTemp").innerHTML;
-let  speed = document.getElementById("speed").innerHTML;
+let speed = document.getElementById("speed").innerHTML;
 
 buildWC(speed, temp);
 
@@ -197,7 +197,7 @@ function buildHourlyData(nextHour,hourly) {
 // Get the next hour based on the current time
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
-let hourly = document.getElementById("hourlyData").innerText;
+
 let hours = buildHourlyData(nextHour, hourly); 
 
 
