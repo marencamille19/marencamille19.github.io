@@ -110,7 +110,7 @@ function getCondition(phrase) {
     return input;
 }
 
-//changes the weather tile image
+//changes the weather tile image, heading, and background picture for all tiles
 function changeSummaryImage(weather) {
     const weatherImages = weather;
     switch (weather) {
@@ -185,6 +185,7 @@ function buildHourlyData(nextHour, hourlyTemp) {
 let date = new Date(); 
 let nextHour = date.getHours() + 1;
 
+//gives error if problem fetching
 console.log('')
 fetch("/wsp_hw/weather/js/weather.json")
  .then(function(response) {
