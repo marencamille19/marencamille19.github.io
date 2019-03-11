@@ -33,8 +33,10 @@ function fetchData(weatherURL){
     let locState = g.State;
     let long = g.Longitude;
     let lat = g.Latitude;
+    console.log('Longitude and latitude: ' + long + " " + lat);
     let elev = g.Elevation;
     let zip = g.Zip;
+    console.log('Zip code is: '+zip);
   
     // Put them together
     let fullName = locName+', '+locState;
