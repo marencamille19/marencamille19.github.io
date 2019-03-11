@@ -31,7 +31,10 @@ function fetchData(weatherURL){
     // Get the location data
     let locName = g.City;
     let locState = g.State;
-
+    let long = g.Longitude;
+    let lat = g.Latitude;
+    let elev = g.Elevation;
+    let zip = g.Zip;
   
     // Put them together
     let fullName = locName+', '+locState;
@@ -81,6 +84,11 @@ function fetchData(weatherURL){
     contentHeading.innerHTML = fullName;
     // The h1 in main h1 should now say "Greenville, SC"
 
+    //set locinfo data
+    document.getElementById("zip").innerHTML = zip;
+    document.getElementById("elevation").innerHTML = elev;
+    document.getElementById("long").innerHTML = long;
+    document.getElementById("lat").innerHTML = lat;
 
     // Set the temperature information
     document.getElementById("curTemp").innerHTML = curTemp + "&deg; F";
