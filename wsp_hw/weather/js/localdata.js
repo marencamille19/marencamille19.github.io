@@ -108,6 +108,9 @@ function fetchData(weatherURL){
     let weather = document.getElementById("weatherTitle").innerHTML;
     changeSummaryImage(weather);
     
+    //meter function
+    let meters = document.getElementById("elevation").innerHTML;
+    elevation.innerHTML = convertMeters(meters);
     // Set the hourly temperature information
     let date = new Date(); 
     let nextHour = date.getHours() + 1;
