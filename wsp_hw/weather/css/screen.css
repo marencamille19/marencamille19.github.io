@@ -54,13 +54,18 @@ header {
     position: relative;
 }
 
-#siteBrand h2 {
+#siteBrand h1 {
     font-family: 'Sansita', sans-serif;
 }
 
 h1 {
     margin-top: 0;
     font-family: 'Sansita', sans-serif;
+}
+
+h2{
+    font-family: 'Sansita', sans-serif;
+    font-size: 40px;
 }
 
 h3,
