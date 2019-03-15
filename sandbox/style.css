@@ -3,6 +3,9 @@ body {
     background-color: yellow;
 }
 
+.hide{
+    display: none;
+  }
 
 /* Larger styles */
 @media screen and (min-width: 800px){

@@ -5,7 +5,7 @@ let pageContent = document.getElementById('pageContent');
 
 
 let weatherURL = "/wsp_hw/weather/js/weather.json";
-fetchData(weatherURL);
+fetchData(weatherURL); 
 
 
 function fetchData(weatherURL){
