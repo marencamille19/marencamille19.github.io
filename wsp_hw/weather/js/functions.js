@@ -321,3 +321,21 @@ function getWeather(stationId) {
     console.log("Information from getHourly: ");
     console.log(data);
 }
+
+// Populate the current location weather page
+function buildPage(){
+    // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
+    // Task 2 - Populate location information
+    // Task 3 - Populate weather information
+    // Task 4 - Hide status and show main
+   }
+
+   let test = convertToFahrenheit(-2);
+   console.log("Fahrenheit converted to Celsius is: ");
+   console.log(test);
+//Convert celsius temperatures to fahrenheit
+function convertToFahrenheit(temp){
+    let c = temp;
+    let f = (c * (9/5) + 32);
+    return f;
+}
