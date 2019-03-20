@@ -12,6 +12,8 @@ function getGeoLocation(){
         navigator.geolocation.getCurrentPosition(function (position) {
          const lat = position.coords.latitude;
          const long = position.coords.longitude;
+         storage.setItem("latitude", lat);
+         storage.setItem("longitude", long);
       
          // Combine the values
          const locale = lat + "," + long;
