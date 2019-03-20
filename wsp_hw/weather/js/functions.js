@@ -318,5 +318,5 @@ function getWeather(stationId) {
 
 
     console.log("Information from getHourly: ");
-    console.log(data);
+    console.log(CharacterData);
 }
