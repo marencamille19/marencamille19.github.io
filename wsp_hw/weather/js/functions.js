@@ -239,6 +239,7 @@ function getLocation(locale) {
       let hourlyURL = data.properties.forecastHourly;
       //Call function to get hourly data
       getHourly(hourlyURL);
+      storage.setItem("hourlyURL", hourlyURL);
      }) 
     .catch(error => console.log('There was a getLocation error: ', error)) 
    } // end getLocation function
@@ -318,5 +319,5 @@ function getWeather(stationId) {
 
 
     console.log("Information from getHourly: ");
-    console.log(CharacterData);
+    console.log(data);
 }
