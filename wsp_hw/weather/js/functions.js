@@ -291,15 +291,28 @@ function getWeather(stationId) {
     console.log(data);
   
     // Store weather information to localStorage 
- 
- 
-    // Build the page for viewing 
+    let temp = data.properties.temperature.value;
+    let elevation = data.properties.elevation.value;
+    let curWeather = data.properties.textDescription;
+    let windGust = data.properties.windGust.value;
+    let windChill = data.properties.windChill.value;
+    let windDirection = data.properties.windDirection.value;
+    let windSpeed = data.properties.windSpeed.value;
     
+
+    // Build the page for viewing 
+    storage.setItem("temperature", temp);
+    storage.setItem("elevation", elevation);
+    storage.setItem("curWeather", curWeather);
+    storage.setItem("windGust", windGust);
+    storage.setItem("windChill", windChill);
+    storage.setItem("windDirection", windDirection);
+    storage.setItem("windSpeed", windSpeed);
    }) 
   .catch(error => console.log('There was a getWeather error: ', error)) 
  } // end getWeather function
 
  //function to collect hourly data
  function getHourly(weatherId){
-        
+
 }
