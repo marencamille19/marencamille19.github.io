@@ -234,6 +234,11 @@ function getLocation(locale) {
       let stationsURL = data.properties.observationStations; 
       // Call the function to get the list of weather stations
       getStationId(stationsURL); 
+
+      //Get hourly weather data
+      let hourlyURL = data.properties.forecastHourly;
+      //Call function to get hourly data
+      getHourly(hourlyURL);
      }) 
     .catch(error => console.log('There was a getLocation error: ', error)) 
    } // end getLocation function
@@ -294,3 +299,7 @@ function getWeather(stationId) {
   .catch(error => console.log('There was a getWeather error: ', error)) 
  } // end getWeather function
 
+ //function to collect hourly data
+ function getHourly(weatherId){
+        
+}
