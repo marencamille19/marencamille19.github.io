@@ -349,6 +349,31 @@ function getWeather(stationId) {
 function buildPage(){
     // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
     
+        //buildWC called and put in web page
+        document.getElementById("feelsLike").innerHTML = buildWC(windSpeed, temperature);
+        console.log(buildWC(windSpeed, temperature));
+
+        //windDial called and put in web page
+        windDial(windDirection);
+        console.log(windDirection);
+        document.getElementById("direction").innerHTML = windDirection;
+
+        //Change summary image and title and background image
+        document.getElementById("weatherTitle").innerHTML = curWeather;
+        curWeather = document.getElementById("weatherTitle").innerHTML;
+        changeSummaryImage(curWeather);
+
+        //Convert from meters to feet
+        let meters = document.getElementById("elevation").innerHTML;
+        elevation.innerHTML = convertMeters(meters);
+
+        //Hourly temp functions
+        let date = new Date(); 
+        let nextHour = date.getHours() + 1;
+        // Call hourly information from API and format using functions
+        hourlyTemp.innerHTML = buildHourlyData(nextHour, hourlyData);
+    
+    
     // Task 2 - Populate location information
 
     // Task 3 - Populate weather information
