@@ -348,9 +348,11 @@ function getWeather(stationId) {
 // Populate the current location weather page
 function buildPage(){
     // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
-    
+
     // Task 2 - Populate location information
+
     // Task 3 - Populate weather information
+    
     // Task 4 - Hide status and show main
    }
 
