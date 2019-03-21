@@ -296,7 +296,6 @@ function getWeather(stationId) {
     let elevation = data.properties.elevation.value;
     let curWeather = data.properties.textDescription;
     let windGust = data.properties.windGust.value;
-    let windChill = data.properties.windChill.value;
     let windDirection = data.properties.windDirection.value;
     let windSpeed = data.properties.windSpeed.value;
     
@@ -306,7 +305,6 @@ function getWeather(stationId) {
     storage.setItem("elevation", elevation);
     storage.setItem("curWeather", curWeather);
     storage.setItem("windGust", windGust);
-    storage.setItem("windChill", windChill);
     storage.setItem("windDirection", windDirection);
     storage.setItem("windSpeed", windSpeed);
    }) 
@@ -314,12 +312,37 @@ function getWeather(stationId) {
  } // end getWeather function
 
  //function to collect hourly data
- function getHourly(weatherId){
-    
-
-
-    console.log("Information from getHourly: ");
+ function getHourly(hourlyURL){
+ fetch(hourlyURL) 
+  .then(function(response){
+    if(response.ok){ 
+     return response.json(); 
+    } 
+    throw new ERROR('Response not OK.');
+  })
+  .then(function (data) { 
+    // Let's see what we got back
+    console.log('From getHourly function:'); 
     console.log(data);
+
+    
+  let hourly = [];
+
+  for (let i = 0; i < 13; i++){
+      hourly[i] = data.properties.periods[i];
+  }
+  //Get variables
+  let windDirection = data.properties.periods[0].windDirection;
+  let windSpeed = data.properties.periods[0].windSpeed;
+  let temperature = data.properties.periods[0].temperature;
+
+  
+  storage.setItem("hourly", hourly);
+  storage.setItem("windDirection", windDirection);
+  storage.setItem("windSpeed", windSpeed);
+  storage.setItem("temperature", temperature);
+  })
+.catch(error => console.log("There was a getHourly error: ", error))
 }
 
 // Populate the current location weather page
