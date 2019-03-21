@@ -228,7 +228,7 @@ function getLocation(locale) {
       // Store data to localstorage 
       storage.setItem("locName", data.properties.relativeLocation.properties.city); 
       storage.setItem("locState", data.properties.relativeLocation.properties.state); 
-   
+      
       // Next, get the weather station ID before requesting current conditions 
       // URL for station list is in the data object 
       let stationsURL = data.properties.observationStations; 
@@ -238,8 +238,13 @@ function getLocation(locale) {
       //Get hourly weather data
       let hourlyURL = data.properties.forecastHourly;
       //Call function to get hourly data
-      getHourly(hourlyURL);
+      let hourlyData = getHourly(hourlyURL);
       storage.setItem("hourlyURL", hourlyURL);
+
+      //Get forecast weather data
+      let forecastURL = data.properties.forecast;
+      storage.setItem("forecastURL", forecastURL);
+      getForecast(forecastURL);
      }) 
     .catch(error => console.log('There was a getLocation error: ', error)) 
    } // end getLocation function
@@ -329,7 +334,7 @@ function getWeather(stationId) {
   let hourly = [];
 
   for (let i = 0; i < 13; i++){
-      hourly[i] = data.properties.periods[i];
+      hourly[i] = data.properties.periods[i].temperature;
   }
   //Get variables
   let windDirection = data.properties.periods[0].windDirection;
@@ -345,17 +350,42 @@ function getWeather(stationId) {
 .catch(error => console.log("There was a getHourly error: ", error))
 }
 
+//function to collect forecast data
+function getForecast(forecastURL){
+    fetch(forecastURL) 
+     .then(function(response){
+       if(response.ok){ 
+        return response.json(); 
+       } 
+       throw new ERROR('Response not OK.');
+     })
+     .then(function (data) { 
+       // Let's see what we got back
+       console.log('From getForecast function:'); 
+       console.log(data);
+   
+     //Get variables
+     let hiTemp = data.properties.periods[0].temperature;
+     let lowTemp = data.properties.periods[1].temperature;
+     let detailedForecast = data.properties.periods[0].detailedForecast;
+   
+     //Store variables in localStorage
+     storage.setItem("hiTemp", hiTemp);
+     storage.setItem("lowTemp", lowTemp);
+     storage.setItem("detailedForecast", detailedForecast);
+     })
+   .catch(error => console.log("There was a getForecast error: ", error))
+   }
+
 // Populate the current location weather page
 function buildPage(){
     // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
     
         //buildWC called and put in web page
         document.getElementById("feelsLike").innerHTML = buildWC(windSpeed, temperature);
-        console.log(buildWC(windSpeed, temperature));
 
         //windDial called and put in web page
         windDial(windDirection);
-        console.log(windDirection);
         document.getElementById("direction").innerHTML = windDirection;
 
         //Change summary image and title and background image
@@ -365,20 +395,35 @@ function buildPage(){
 
         //Convert from meters to feet
         let meters = document.getElementById("elevation").innerHTML;
-        elevation.innerHTML = convertMeters(meters);
 
         //Hourly temp functions
         let date = new Date(); 
         let nextHour = date.getHours() + 1;
         // Call hourly information from API and format using functions
         hourlyTemp.innerHTML = buildHourlyData(nextHour, hourlyData);
-    
-    
+        
     // Task 2 - Populate location information
+        //Location city and state
+        let fullName = storage.getItem("locName") + ", " + storage.getItem("locState");
+        document.getElementById("locName") = locName + ", " + locState;
 
+
+        //Get elevation in meters convert to feet and put in page
+        let stationElevation = storage.getItem("stationElevation");
+        let elevation = convertMeters(stationElevation);
+        document.getElementById("elevation").innerHTML = elevation;
+
+        //Get latitude and longitude format beautifully and put in page
+        let lat = storage.getItem("latitude");
+        let long = storage.getItem("longitude");
+        
+        
     // Task 3 - Populate weather information
     
+
     // Task 4 - Hide status and show main
+        //pageContent.setAttribute('class', '');
+        //statusMessage.setAttribute('class', 'hide');
    }
 
    let test = convertToFahrenheit(-2);
