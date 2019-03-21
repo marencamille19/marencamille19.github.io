@@ -315,7 +315,7 @@ function getWeather(stationId) {
 
  //function to collect hourly data
  function getHourly(weatherId){
-
+    
 
 
     console.log("Information from getHourly: ");
