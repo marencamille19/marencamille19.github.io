@@ -1,5 +1,12 @@
 'use strict';
 
+//Set global variable for custom header required by NWS API
+var idHeader = {
+    headers: {
+        "User-Agent": "Student Learning Project = ste18009@byui.edu"
+    }
+}
+
 //Get geo location
 getGeoLocation();
 
