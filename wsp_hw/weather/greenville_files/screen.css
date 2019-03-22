@@ -27,17 +27,19 @@ html {
     margin: .2em auto;
     border: 1px solid;
     border-radius: 15px;
+    z-index: -1;
 }
 
 header {
     background-color: #0e89d5;
     padding: 3px;
-    padding-bottom: 2px;
+    padding-bottom: 0px;
     width: 100%;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-#page-header {
+#pageHeader {
     display: flex;
     justify-content: flex-start;
 }
@@ -50,13 +52,13 @@ header {
     margin: 0px;
 }
 
-#site-brand {
+#siteBrand {
     font-size: 45px;
     position: relative;
     margin: 0px;
 }
 
-#site-brand h2 {
+#siteBrand h2 {
     font-family: 'Sansita', sans-serif;
 }
 
@@ -75,16 +77,22 @@ h6 {
     margin: 0;
 }
 
+#pageNav{
+    z-index: 200;
+}
+
 nav {
     background-color: #0e89d5;
     width: 100%;
     bottom: 0;
     left: 0;
+    z-index: 200;
 }
 
 nav ul {
     display: flex;
     justify-content: space-around;
+    z-index: 200;
 }
 
 nav ul li {
@@ -92,6 +100,7 @@ nav ul li {
     list-style: none;
     margin-right: 5px;
     padding: 0px;
+    z-index: 200;
 }
 
 nav ul li a {
@@ -99,7 +108,7 @@ nav ul li a {
     color: white;
 }
 
-#page-content ul {
+#pageContent ul {
     display: flex;
 }
 
@@ -144,9 +153,9 @@ body {
     height: 150px;
     width: 150px;
     background: no-repeat center/85% url("/wsp_hw/weather/images/wind-pointer.png");
-    z-index: 100;
     margin: -.6em auto 0;
 }
+
 /* Wind direction rules */
 .n{
     transform: rotate(0deg);
@@ -218,6 +227,7 @@ footer {
 
 nav {
     position: fixed;
+    z-index: 200;
 }
 
 img{
@@ -234,16 +244,6 @@ img{
 }
 
 /* Section 3: Mobile first rules */
-
-
-#windSpeed {
-    font-size: 25px;
-    position: absolute;
-    top: 33%;
-    left: 45%;
-}
-
-
 /* summary image rules for smaller screens*/
 @media screen and (max-width: 799px){
 .clear{
@@ -270,12 +270,6 @@ img{
 @media screen and (min-width: 800px) {
 
     /* css for large screens goes here */
-    #windSpeed {
-        position: absolute;
-        top: 32%;
-        left: 40%;
-    }
-
     #curWeather {
         display: flex;
         flex-direction: row;
@@ -284,16 +278,19 @@ img{
 
     nav {
         position: static;
+        z-index: 200;
     }
 
     nav ul {
         margin: 0;
         padding-bottom: 5px;
+        z-index: 200;
     }
 
     footer {
         margin-bottom: 0;
         padding: 5px;
+        z-index: 200;
     }
 
     .clear{

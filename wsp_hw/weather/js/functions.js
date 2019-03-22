@@ -80,39 +80,76 @@ function getCondition(phrase) {
     switch (input) {
         case "Partly Cloudy":
         case "Cloudy":
-        case "cloudy":
-        case "partly cloudy":
-        case "clouds":
         case "Clouds":
+        case "Mostly Cloudy":
+        case "Patchy":
+        case "Overcast":
             input = "cloudy";
             break;
         case "Rainy":
-        case "rainy":
         case "Wet Weather":
-        case "wet weather":
+        case "Typhoon":
         case "Thunderstorms":
+        case "Shower":
         case "Light Rain":
+        case "Rainfall":
+        case "Storm Warning":
+        case "Storm Watch":
+        case "Freezing Rain":
+        case "Freezing Drizzle":
+        case "Storm":
+        case "Rain Showers":
+        case "Rainshower":
+        case "Small Hail":
+        case "Hail":
+        case "Sleet":
+        case "Sleet Warning":
+        case "Severe Thunderstorm":
+        case "Ribbon Lightning":
+        case "Pulse Storm":
+        case "Probability of Hail":
+        case "Monsoon":
+        case "Lightning":
             input = "rainy";
             break;
         case "Clear":
-        case "clear":
+        case "Partly Sunny":
         case "Sunny":
-        case "sunny":
         case "Clear Skies":
-        case "clear skies":
+        case "Sunrise":
+        case "Sunset":
+        case "Rainbow":
+        case "Wind":
+        case "Prevailing Wind":
+        case "Mostly Sunny":
+        case "Mostly Clear":
             input = "clear";
             break;
-        case "flurries":
+        case "Flurries":
+        case "Powder Snow":
         case "Snowy":
-        case "snowy":
-        case "snowing":
         case "Snowing":
+        case "Snowfall":
+        case "Snow":
+        case "Snow Advisory":
+        case "Snow Flurries":
+        case "Snow Shower":
+        case "Snow Showers":
+        case "Winter Storm":
+        case "Winter Weather Advisory":
+        case "Winter Storm Watch":
+        case "Winter Storm Warning":
+        case "Winter Solstice":
             input = "snow";
             break;
         case "Foggy":
-        case "foggy":
-        case "fog":
         case "Fog":
+        case "Smoke":
+        case "Smog":
+        case "Scud":
+        case "Sandstorm":
+        case "Muggy":
+        case "Mist":
             input = "fog";
             break; 
     }
@@ -372,8 +409,9 @@ function getForecast(forecastURL){
    }
 
 
-   // call function
+// call function
    buildPage();
+   
 // Populate the current location weather page
 function buildPage(){
     // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
@@ -412,7 +450,7 @@ function buildPage(){
         let hourlyData = hourlyStorage.split(",");
         hourlyTemp.innerHTML = buildHourlyData(nextHour, hourlyData);
         
-     // Task 2 - Populate location information
+    // Task 2 - Populate location information
          //Location city and state
          let fullName = storage.getItem("locName") + ", " + storage.getItem("locState");
          document.getElementById("locName").innerHTML = fullName;
@@ -423,7 +461,7 @@ function buildPage(){
          lat = Math.round(lat * 100)/100;
          long = Math.round(long * 100)/100; 
          document.getElementById("lat").innerHTML = lat + "&deg; N, ";
-         document.getElementById("long").innerHTML = long + "&deg; S";
+         document.getElementById("long").innerHTML = long + "&deg; W";
          
         
     // Task 3 - Populate weather information
