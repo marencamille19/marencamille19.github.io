@@ -298,21 +298,14 @@ function getWeather(stationId) {
     console.log(data);
   
     // Store weather information to localStorage 
-    let temp = data.properties.temperature.value;
     let elevation = data.properties.elevation.value;
     let curWeather = data.properties.textDescription;
-    let windGust = data.properties.windGust.value;
-    let windDirection = data.properties.windDirection.value;
-    let windSpeed = data.properties.windSpeed.value;
-    
+    let windGust = data.properties.windGust.value;    
 
     // Build the page for viewing 
-    storage.setItem("temperature", temp);
     storage.setItem("elevation", elevation);
     storage.setItem("curWeather", curWeather);
     storage.setItem("windGust", windGust);
-    storage.setItem("windDirection", windDirection);
-    storage.setItem("windSpeed", windSpeed);
    }) 
   .catch(error => console.log('There was a getWeather error: ', error)) 
  } // end getWeather function
@@ -388,12 +381,18 @@ function buildPage(){
       //buildWC called and put in web page
       let windSpeed = storage.getItem("windSpeed");
       let temperature = storage.getItem("temperature");
-      let convertTemp = convertToFahrenheit(temperature);
-      document.getElementById("feelsLike").innerHTML = buildWC(windSpeed, convertTemp);
+      let ws = windSpeed.charAt(0);
+      let feelsLike = buildWC(ws, temperature);
+      document.getElementById("feelsLike").innerHTML = feelsLike;
+      document.getElementById("speed").innerHTML = windSpeed;
 
          //windDial called and put in web page
-    //     windDial(windDirection);
-    //     document.getElementById("direction").innerHTML = windDirection;
+         let windDirection = storage.getItem("windDirection");
+         windDial(windDirection);
+         document.getElementById("direction").innerHTML = windDirection;
+         let windGust = storage.getItem("windGust");
+         document.getElementById("gusts").innerHTML = windGust;
+         
 
          //Change summary image and title and background image
          let curWeather = storage.getItem("curWeather");
@@ -428,8 +427,13 @@ function buildPage(){
          document.getElementById("long").innerHTML = long + "&deg; S";
          
         
-    // // Task 3 - Populate weather information
-    
+    // Task 3 - Populate weather information
+        let hiTemp = storage.getItem("hiTemp");
+        let lowTemp = storage.getItem("lowTemp");
+        document.getElementById("hot").innerHTML = hiTemp + "&deg; F";
+        document.getElementById("cold").innerHTML = lowTemp + "&deg; F";
+        document.getElementById("currentTemp").innerHTML = temperature;
+
 
     // Task 4 - Hide status and show main
         pageContent.setAttribute('class', '');
