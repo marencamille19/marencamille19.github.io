@@ -213,10 +213,6 @@ nav {
     position: fixed;
 }
 
-#wind {
-    position: relative;
-}
-
 img{
     max-width: 100%;
 }
@@ -277,10 +273,6 @@ img{
         display: flex;
         flex-direction: row;
         background-size: cover;
-    }
-
-    .tile {
-        flex-grow: 1;
     }
 
     nav {
