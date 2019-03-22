@@ -399,7 +399,6 @@ function buildPage(){
          let condition = getCondition(curWeather);
          changeSummaryImage(condition);
          document.getElementById("weatherTitle").innerHTML = curWeather;
-    
          let elevation = storage.getItem("elevation");
          let meters = convertMeters(elevation);
          document.getElementById("elevation").innerHTML = meters;
