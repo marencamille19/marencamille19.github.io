@@ -91,6 +91,7 @@ function getCondition(phrase) {
         case "Wet Weather":
         case "wet weather":
         case "Thunderstorms":
+        case "Light Rain":
             input = "rainy";
             break;
         case "Clear":
@@ -377,58 +378,64 @@ function getForecast(forecastURL){
    .catch(error => console.log("There was a getForecast error: ", error))
    }
 
+
+   // call function
+   buildPage();
 // Populate the current location weather page
 function buildPage(){
     // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
     
-        //buildWC called and put in web page
-        document.getElementById("feelsLike").innerHTML = buildWC(windSpeed, temperature);
+      //buildWC called and put in web page
+      let windSpeed = storage.getItem("windSpeed");
+      let temperature = storage.getItem("temperature");
+      let convertTemp = convertToFahrenheit(temperature);
+      document.getElementById("feelsLike").innerHTML = buildWC(windSpeed, convertTemp);
 
-        //windDial called and put in web page
-        windDial(windDirection);
-        document.getElementById("direction").innerHTML = windDirection;
+         //windDial called and put in web page
+    //     windDial(windDirection);
+    //     document.getElementById("direction").innerHTML = windDirection;
 
-        //Change summary image and title and background image
-        document.getElementById("weatherTitle").innerHTML = curWeather;
-        curWeather = document.getElementById("weatherTitle").innerHTML;
-        changeSummaryImage(curWeather);
+         //Change summary image and title and background image
+         let curWeather = storage.getItem("curWeather");
+         let condition = getCondition(curWeather);
+         changeSummaryImage(condition);
+         document.getElementById("weatherTitle").innerHTML = curWeather;
+    
+         let elevation = storage.getItem("elevation");
+         let meters = convertMeters(elevation);
+         document.getElementById("elevation").innerHTML = meters;
 
-        //Convert from meters to feet
-        let meters = document.getElementById("elevation").innerHTML;
 
         //Hourly temp functions
         let date = new Date(); 
         let nextHour = date.getHours() + 1;
         // Call hourly information from API and format using functions
+        let hourlyStorage = storage.getItem("hourly");
+        let hourlyData = hourlyStorage.split(",");
         hourlyTemp.innerHTML = buildHourlyData(nextHour, hourlyData);
         
-    // Task 2 - Populate location information
-        //Location city and state
-        let fullName = storage.getItem("locName") + ", " + storage.getItem("locState");
-        document.getElementById("locName") = locName + ", " + locState;
+     // Task 2 - Populate location information
+         //Location city and state
+         let fullName = storage.getItem("locName") + ", " + storage.getItem("locState");
+         document.getElementById("locName").innerHTML = fullName;
 
-
-        //Get elevation in meters convert to feet and put in page
-        let stationElevation = storage.getItem("stationElevation");
-        let elevation = convertMeters(stationElevation);
-        document.getElementById("elevation").innerHTML = elevation;
-
-        //Get latitude and longitude format beautifully and put in page
-        let lat = storage.getItem("latitude");
-        let long = storage.getItem("longitude");
+         //Get latitude and longitude format beautifully and put in page
+         let lat = storage.getItem("latitude");
+         let long = storage.getItem("longitude");
+         lat = Math.round(lat * 100)/100;
+         long = Math.round(long * 100)/100; 
+         document.getElementById("lat").innerHTML = lat + "&deg; N, ";
+         document.getElementById("long").innerHTML = long + "&deg; S";
+         
         
-        
-    // Task 3 - Populate weather information
+    // // Task 3 - Populate weather information
     
 
     // Task 4 - Hide status and show main
-        //pageContent.setAttribute('class', '');
-        //statusMessage.setAttribute('class', 'hide');
+        pageContent.setAttribute('class', '');
+        statusMessage.setAttribute('class', 'hide');
    }
 
-   let test = convertToFahrenheit(-2);
-   console.log("Fahrenheit converted to Celsius is: ");
-   console.log(test);
 //Convert celsius temperatures to fahrenheit
 function convertToFahrenheit(temp){
     let c = temp;
