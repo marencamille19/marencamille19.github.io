@@ -423,24 +423,29 @@ function buildPage(){
       let feelsLike = buildWC(ws, temperature);
       document.getElementById("feelsLike").innerHTML = feelsLike;
       document.getElementById("speed").innerHTML = windSpeed;
-
+      console.log("Wind Speed is " + windSpeed);
+      console.log("Current temperature is " + temperature);
+    
          //windDial called and put in web page
          let windDirection = storage.getItem("windDirection");
          windDial(windDirection);
+         console.log("Wind direction is " + windDirection);
          document.getElementById("direction").innerHTML = windDirection;
          let windGust = storage.getItem("windGust");
          document.getElementById("gusts").innerHTML = windGust;
+         console.log("Wind gusts are " + windGust);
          
 
          //Change summary image and title and background image
          let curWeather = storage.getItem("curWeather");
          let condition = getCondition(curWeather);
          changeSummaryImage(condition);
+         console.log("Current weather is " + curWeather);
          document.getElementById("weatherTitle").innerHTML = curWeather;
          let elevation = storage.getItem("elevation");
          let meters = convertMeters(elevation);
          document.getElementById("elevation").innerHTML = meters;
-
+         console.log("The elevation is " + elevation);
 
         //Hourly temp functions
         let date = new Date(); 
@@ -454,7 +459,7 @@ function buildPage(){
          //Location city and state
          let fullName = storage.getItem("locName") + ", " + storage.getItem("locState");
          document.getElementById("locName").innerHTML = fullName;
-
+         console.log("Location name is " + fullName);
          //Get latitude and longitude format beautifully and put in page
          let lat = storage.getItem("latitude");
          let long = storage.getItem("longitude");
@@ -462,7 +467,7 @@ function buildPage(){
          long = Math.round(long * 100)/100; 
          document.getElementById("lat").innerHTML = lat + "&deg; N, ";
          document.getElementById("long").innerHTML = long + "&deg; W";
-         
+         console.log("Latitude and Longitude are " + lat + ", " + long);
         
     // Task 3 - Populate weather information
         let hiTemp = storage.getItem("hiTemp");
@@ -470,7 +475,9 @@ function buildPage(){
         document.getElementById("hot").innerHTML = hiTemp + "&deg; F";
         document.getElementById("cold").innerHTML = lowTemp + "&deg; F";
         document.getElementById("currentTemp").innerHTML = temperature;
-
+        console.log("The High today is " + hiTemp);
+        console.log("The Low today is " + lowTemp);
+        console.log("The Current temperature is " + temperature);
 
     // Task 4 - Hide status and show main
         pageContent.setAttribute('class', '');
