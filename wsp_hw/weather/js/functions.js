@@ -283,6 +283,9 @@ function getLocation(locale) {
       let forecastURL = data.properties.forecast;
       storage.setItem("forecastURL", forecastURL);
       getForecast(forecastURL);
+
+      // call function
+      buildPage();
      }) 
     .catch(error => console.log('There was a getLocation error: ', error)) 
    } // end getLocation function
@@ -408,10 +411,6 @@ function getForecast(forecastURL){
    .catch(error => console.log("There was a getForecast error: ", error))
    }
 
-
-// call function
-   buildPage();
-   
 // Populate the current location weather page
 function buildPage(){
     // Task 1 - Feed data to WC, Dial, Image, Meters to feet and hourly temps functions
@@ -460,6 +459,12 @@ function buildPage(){
          let fullName = storage.getItem("locName") + ", " + storage.getItem("locState");
          document.getElementById("locName").innerHTML = fullName;
          console.log("Location name is " + fullName);
+         
+         //Change Title on tab
+         let fullNameNode = document.createTextNode(fullName);
+         pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
+         document.getElementById("pageTitle").innerHTML = fullName;
+
          //Get latitude and longitude format beautifully and put in page
          let lat = storage.getItem("latitude");
          let long = storage.getItem("longitude");
