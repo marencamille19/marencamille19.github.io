@@ -7,6 +7,51 @@ body{
     background-color: white;
     width: 95%;    
     margin: auto;
+    font-family: 'Sansita', sans-serif;
+}
+
+h1{
+    font-family: 'Sansita', sans-serif;
+}
+
+nav ul{
+    background-color: #de2226;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 0px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 5px;
+    margin-right: 5px;  
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+#acmeRocket{
+    list-style: none;
+    background-image: url("/final_acme/acme/images/site/feature.jpg");
+}
+
+#acmeRocket ul li{
+    list-style: none;
+    color: #990033
+}
+
+#featureHeader{
+    color: #990033;
+}
+
+footer {
+    padding: 3px;
+    border-top: 2px solid black;  
+    text-align: center;
 }
 
 @media screen and (min-width: 800px) {
