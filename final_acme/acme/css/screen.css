@@ -12,6 +12,8 @@ body{
 
 h1{
     font-family: 'Sansita', sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul{
@@ -35,14 +37,13 @@ nav ul li a{
 }
 
 #acmeRocket{
-    height: auto;
-    width: auto;
     list-style: none;
     background-image: url("/final_acme/acme/images/site/feature.jpg");
+    background-size: cover;
     display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    align-items: 
+    justify-content: flex-end;
+    flex-wrap: nowrap; 
+    align-items: flex-start;
 }
 
 #acmeRocket ul li{
