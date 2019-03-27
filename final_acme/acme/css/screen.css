@@ -35,8 +35,14 @@ nav ul li a{
 }
 
 #acmeRocket{
+    height: auto;
+    width: auto;
     list-style: none;
     background-image: url("/final_acme/acme/images/site/feature.jpg");
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: 
 }
 
 #acmeRocket ul li{
