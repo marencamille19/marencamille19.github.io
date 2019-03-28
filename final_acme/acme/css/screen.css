@@ -33,7 +33,7 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: white;
+    color: #FFFFFF;
 }
 
 #acmeRocket{
@@ -57,13 +57,13 @@ figure {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: grey;
-    width: 15%;
-    height: 100px;
+    background-color: #80808085;
+    width: 30%;
+    height: 65px;
 }
 
 figcaption{
-    background-color: white;
+    background-color: #FFFFFF;
     text-align: center;
 }
 
@@ -82,7 +82,7 @@ figcaption{
 
 footer {
     padding: 3px;
-    border-top: 2px solid black;  
+    border-top: 2px solid #000000;  
     text-align: center;
 }
 
