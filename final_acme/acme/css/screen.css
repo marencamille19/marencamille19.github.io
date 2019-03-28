@@ -51,6 +51,14 @@ nav ul li a{
     color: #990033
 }
 
+#menuItems1{
+    display: flex;
+}
+
+#menuItems2{
+    display: flex;
+}
+
 #featureHeader{
     color: #990033;
 }
