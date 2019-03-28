@@ -40,6 +40,7 @@ nav ul li a{
     list-style: none;
     background-image: url("/final_acme/acme/images/site/feature.jpg");
     background-size: cover;
+    height: 300px;
     display: flex;
     justify-content: flex-end;
     flex-wrap: nowrap; 
@@ -48,7 +49,8 @@ nav ul li a{
 
 #acmeRocket ul li{
     list-style: none;
-    color: #990033
+    color: #990033;
+    padding-right: 10px;
 }
 
 #menuItems1{
