@@ -53,12 +53,27 @@ nav ul li a{
     padding-right: 10px;
 }
 
-#menuItems1{
+figure {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+    width: 15%;
+    height: 100px;
 }
 
-#menuItems2{
+figcaption{
+    background-color: white;
+    text-align: center;
+}
+
+#recipes{
     display: flex;
+    flex-wrap: wrap;
+}
+
+#recipesHeader{
+    padding-right: 300px;
 }
 
 #featureHeader{
