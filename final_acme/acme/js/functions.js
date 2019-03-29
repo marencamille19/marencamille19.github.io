@@ -2,9 +2,6 @@
 let pageNav = document.getElementById('pageNav');
 let pageContent = document.getElementById('pageContent');
 
-let navURL = "/final_acme/acme/js/acme.json";
-//fetchData(navURL);
-
 //fetch Anvil information
 function fetchAnvil(navURL){
     let name = 'Anvil';
@@ -22,7 +19,7 @@ function fetchAnvil(navURL){
 }
 
 //fetch Explosives information
-function fetchExplosives(navURL);
+function fetchExplosives(navURL){
     let name = 'TNT';
     fetch(navURL)
     .then(function(response){
@@ -34,10 +31,20 @@ function fetchExplosives(navURL);
     .then(function(data){
         console.log(data);
     let e = data[name];
+    let path = e.path;
+    let desc = e.description;
+    let manu = e.manufacturer;
+    let price = e.price;
+    let reviews = e.reviews;
     })
+    .catch(function(error){
+        console.log('There was a fetch problem: ', error.message);
+
+    })
+}
 
 //fetch Decoys information
-function fetchDecoys(navURL);
+function fetchDecoys(navURL){
     let name = 'Roadrunner Decoy';
     fetch(navURL)
     .then(function(response){
@@ -50,9 +57,10 @@ function fetchDecoys(navURL);
         console.log(data);
     let d = data[name];
     })
+}
 
 //fetch Traps information
-function fetchTraps(navURL);
+function fetchTraps(navURL){
     let name = 'All Purpose Trap';
     fetch(navURL)
     .then(function(response){
@@ -65,6 +73,39 @@ function fetchTraps(navURL);
         console.log(data);
     let t = data[name];
     })
+}
+
+
+let navURL = "/final_acme/acme/js/acme.json";
+//fetchData(navURL);
+//call function
+let navData = getNav(navURL);
+let navBar = buildNavBar(navData);
+console.log("Navbar results are: " + navBar);
+
+
+function getNav(navURL){
+    fetch(navURL) 
+     .then(function(response){
+       if(response.ok){ 
+        return response.json(); 
+       } 
+       throw new ERROR('Response not OK.');
+     })
+     .then(function (data) { 
+       // Let's see what we got back
+       console.log('From getnav function:'); 
+       console.log(data);
+   
+       
+     let nav = [];
+   
+     for (let i = 0; i < 13; i++){
+         nav[i] = navURL;
+     }
+    })
+    .catch(error => console.log("There was a getNav error: ", error))
+}
 
 // Build the navigation bar list
 function buildNavBar(jsonArray) {
