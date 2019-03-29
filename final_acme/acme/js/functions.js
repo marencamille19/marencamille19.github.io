@@ -79,8 +79,8 @@ function fetchTraps(navURL){
 let navURL = "/final_acme/acme/js/acme.json";
 //fetchData(navURL);
 //call function
-let navData = getNav(navURL);
-let navBar = buildNavBar(navData);
+let data = getNav(navURL);
+let navBar = buildNavBar(data.);
 console.log("Navbar results are: " + navBar);
 
 
@@ -101,7 +101,7 @@ function getNav(navURL){
      let nav = [];
    
      for (let i = 0; i < 13; i++){
-         nav[i] = navURL;
+         nav[i] = navURL.name;
      }
     })
     .catch(error => console.log("There was a getNav error: ", error))
