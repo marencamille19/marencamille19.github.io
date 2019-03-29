@@ -1,20 +1,26 @@
 'use strict';
 let pageNav = document.getElementById('pageNav');
 let pageContent = document.getElementById('pageContent');
+let storage = window.localStorage;
+
+let navURL = "/final_acme/acme/js/acme.json";
+let anvilURL = fetchAnvil(navURL);
+console.log("anvilURL is: " + anvilURL);
 
 //fetch Anvil information
 function fetchAnvil(navURL){
     let name = 'Anvil';
     fetch(navURL)
     .then(function(response){
-    if(response.ok){
+    if(response.ok){ 
         return response.json();
     }
     throw new Error('Javascript must be enabled to access site');
     })
     .then(function(data){
-        console.log(data);
-    let a = data[name];
+    console.log(data);
+    let anvil = data[name];
+    storage.setItem("anvilName", anvil);
     })
 }
 
@@ -76,11 +82,10 @@ function fetchTraps(navURL){
 }
 
 
-let navURL = "/final_acme/acme/js/acme.json";
 //fetchData(navURL);
 //call function
 let data = getNav(navURL);
-let navBar = buildNavBar(data.);
+let anvilNav = buildNavBar(data.Anvils.name);
 console.log("Navbar results are: " + navBar);
 
 
