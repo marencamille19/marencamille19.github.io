@@ -16,6 +16,10 @@ h1{
     margin: 0;
 }
 
+h3{
+    padding-left: 5px;
+}
+
 nav ul{
     background-color: #de2226;
     height: 50px;
@@ -36,15 +40,31 @@ nav ul li a{
     color: #FFFFFF;
 }
 
+#logo{
+    padding-left: 5px;
+}
+
 #acmeRocket{
     list-style: none;
     background-image: url("/final_acme/acme/images/site/feature.jpg");
     background-size: cover;
-    height: 300px;
     display: flex;
     justify-content: flex-end;
     flex-wrap: nowrap; 
     align-items: flex-start;
+    height: 175px;
+}
+
+#acmeRocket ul{
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0;
+    padding-left: 5px;
+    font-size: 12px;
+    height: 175px;
+}
+
+#acmeRocket img{
+    width: 145px;
 }
 
 #acmeRocket ul li{
@@ -58,8 +78,10 @@ figure {
     flex-direction: column;
     align-items: center;
     background-color: #80808085;
-    width: 30%;
+    width: 44%;
+    margin: 10px;
 }
+
 
 figure img{
     height: 100px;
@@ -68,6 +90,8 @@ figure img{
 figcaption{
     background-color: #FFFFFF;
     text-align: center;
+    width: 100%;
+    height: 40px; 
 }
 
 #recipes{
@@ -76,11 +100,12 @@ figcaption{
 }
 
 #recipesHeader{
-    padding-right: 300px;
+    padding-right: 225px;
 }
 
 #featureHeader{
     color: #990033;
+    margin: 0;
 }
 
 footer {
@@ -91,6 +116,7 @@ footer {
 }
 
 @media screen and (min-width: 800px) {
+
 
 }
 
