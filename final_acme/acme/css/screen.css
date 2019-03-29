@@ -116,8 +116,56 @@ footer {
 }
 
 @media screen and (min-width: 800px) {
+    h2{
+        font-size: 50px;
+    }  
 
+    h3{
+        font-size: 30px;
+        padding-top: 5px;
+        margin: 0;
+    }
+    
+    #acmeRocket{
+        height: 375px;
+    }
 
+    #acmeRocket ul{
+        height: 375px;
+        background: none;
+    }
+
+    #acmeRocket ul li{
+        font-size: 25px;
+    }
+
+    #acmeRocket img{
+        width: 225px;
+    }
+
+    #reviewsRecipes{
+        display: flex;
+    }
+
+    #reviews{
+        order: 1;
+        font-size: 22px;
+    }
+
+    #recipes{
+        order: 0;
+        width: 50%;
+    }
+
+    #recipesHeader{
+        margin: 0;
+        padding-right: 50px;
+        padding-top:5px;
+    }
+
+    figure{
+        width: 40%;
+    }
 }
 
 
