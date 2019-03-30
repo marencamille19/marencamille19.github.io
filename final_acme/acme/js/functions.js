@@ -6,6 +6,8 @@ let storage = window.localStorage;
 let navURL = "/final_acme/acme/js/acme.json";
 storage.setItem("navURL", navURL);
 
+buildPage();
+
 function buildPage(){
   //call get functions, put in another function eventually
   getAnvil(navURL);
@@ -15,7 +17,8 @@ function buildPage(){
 
   //call buildNavBar
   let navBar =  buildNavBar("Home", storage.getItem("aname"), storage.getItem("ename"), storage.getItem("dname"), storage.getItem("tname"));
-
+  storage.setItem("navBar", navBar);
+  document.getElementById("navList").innerHTML = navBar;
 }
 
 //getAnvil function
@@ -199,9 +202,9 @@ function buildNavBar(one, two, three, four, five) {
    let navBarItems = [one, two, three, four, five];
    storage.setItem("navBarItems", navBarItems);
 
-   let navBar = "";
+   let navBar = '<li><a href="index.html" title="Link to home page">' + navBarItems[0] + '</li>';
 
-   for(let i = 0; i < navBarItems.length; i++){
+   for(let i = 1; i < navBarItems.length; i++){
      navBar += '<li>' + navBarItems[i] + '</li>';
    }
    console.log('NavBar is: ' + navBar);
