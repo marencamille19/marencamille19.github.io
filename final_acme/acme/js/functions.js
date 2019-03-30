@@ -4,106 +4,30 @@ let pageContent = document.getElementById('pageContent');
 let storage = window.localStorage;
 
 let navURL = "/final_acme/acme/js/acme.json";
-let anvilURL = fetchAnvil(object.Anvils.name);
-console.log("anvilURL is: " + anvilURL);
+storage.setItem("navURL", navURL);
+getAnvil(navURL);
+// let anvilURL = fetchAnvil(object.Anvils.name);
+// console.log("anvilURL is: " + anvilURL);
 
-//Givers error if problem fetching 
-fetch("/final_acme/acme/js/functions.js")
-  .then(function(response){
-      if(response.ok){
-          return response.json();
-      }
-      throw new ERROR('Network response was not OK.');
-  })
-  .then(function(data){
-  })
-  .catch(function(error){
-  console.log('There was a fetch problem: ', error.message);
-  })
+//Gives error if problem fetching 
+// fetch("/final_acme/acme/js/functions.js")
+//   .then(function(response){
+//       if(response.ok){
+//           return response.json();
+//       }
+//       throw new ERROR('Network response was not OK.');
+//   })
+//   .then(function(data){
+//   })
+//   .catch(function(error){
+//   console.log('There was a fetch problem: ', error.message);
+//   })
 
-//fetch Anvil information
-function fetchAnvil(navURL){
+// let anvilNav = buildNavBar(data.Anvils.name);
+// console.log("Navbar results are: " + navBar);
+
+function getAnvil(navURL){
     let name = 'Anvil';
-    fetch(navURL)
-    .then(function(response){
-    if(response.ok){ 
-        return response.json();
-    }
-    throw new Error('Javascript must be enabled to access site');
-    })
-    .then(function(data){
-    console.log(data);
-    let anvil = data[name];
-    storage.setItem("anvilName", anvil);
-    })
-}
-
-//fetch Explosives information
-function fetchExplosives(navURL){
-    let name = 'TNT';
-    fetch(navURL)
-    .then(function(response){
-    if(response.ok){
-            return response.json();
-    }
-    throw new Error('Javascript must be enabled to access site');
-    })
-    .then(function(data){
-        console.log(data);
-    let e = data[name];
-    let path = e.path;
-    let desc = e.description;
-    let manu = e.manufacturer;
-    let price = e.price;
-    let reviews = e.reviews;
-    })
-    .catch(function(error){
-        console.log('There was a fetch problem: ', error.message);
-
-    })
-}
-
-//fetch Decoys information
-function fetchDecoys(navURL){
-    let name = 'Roadrunner Decoy';
-    fetch(navURL)
-    .then(function(response){
-    if(response.ok){
-            return response.json();
-    }
-    throw new Error('Javascript must be enabled to access site');
-    })
-    .then(function(data){
-        console.log(data);
-    let d = data[name];
-    })
-}
-
-//fetch Traps information
-function fetchTraps(navURL){
-    let name = 'All Purpose Trap';
-    fetch(navURL)
-    .then(function(response){
-    if(response.ok){
-            return response.json();
-    }
-    throw new Error('Javascript must be enabled to access site');
-    })
-    .then(function(data){
-        console.log(data);
-    let t = data[name];
-    })
-}
-
-
-//fetchData(navURL);
-//call function
-let data = getNav(navURL);
-let anvilNav = buildNavBar(data.Anvils.name);
-console.log("Navbar results are: " + navBar);
-
-
-function getNav(navURL){
     fetch(navURL) 
      .then(function(response){
        if(response.ok){ 
@@ -113,17 +37,18 @@ function getNav(navURL){
      })
      .then(function (data) { 
        // Let's see what we got back
-       console.log('From getnav function:'); 
+       console.log('From getAnvil function:'); 
        console.log(data);
    
        
-     let nav = [];
+     let anvil = "";
    
-     for (let i = 0; i < 13; i++){
-         nav[i] = navURL.name;
-     }
+     let anvilURL = data.Object.name;
+     storage.setItem("anvilURL", anvilURL);
+
+     console.log("anvilURL is : " + anvilURL);
     })
-    .catch(error => console.log("There was a getNav error: ", error))
+    .catch(error => console.log("There was a getAnvil error: ", error))
 }
 
 // Build the navigation bar list
