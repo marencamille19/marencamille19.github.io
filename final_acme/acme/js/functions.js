@@ -4,8 +4,22 @@ let pageContent = document.getElementById('pageContent');
 let storage = window.localStorage;
 
 let navURL = "/final_acme/acme/js/acme.json";
-let anvilURL = fetchAnvil(navURL);
+let anvilURL = fetchAnvil(object.Anvils.name);
 console.log("anvilURL is: " + anvilURL);
+
+//Givers error if problem fetching 
+fetch("/final_acme/acme/js/functions.js")
+  .then(function(response){
+      if(response.ok){
+          return response.json();
+      }
+      throw new ERROR('Network response was not OK.');
+  })
+  .then(function(data){
+  })
+  .catch(function(error){
+  console.log('There was a fetch problem: ', error.message);
+  })
 
 //fetch Anvil information
 function fetchAnvil(navURL){
