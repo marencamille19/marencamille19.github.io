@@ -6,14 +6,17 @@ let storage = window.localStorage;
 let navURL = "/final_acme/acme/js/acme.json";
 storage.setItem("navURL", navURL);
 
-//call get functions, put in another function eventually
-getAnvil(navURL);
-getExplosives(navURL);
-getDecoys(navURL);
-getTraps(navURL);
+function buildPage(){
+  //call get functions, put in another function eventually
+  getAnvil(navURL);
+  getExplosives(navURL);
+  getDecoys(navURL);
+  getTraps(navURL);
 
-//call buildNavBar
-let navBar =  buildNavBar("Home", storage.getItem("aname"), storage.getItem("ename"), storage.getItem("dname"), storage.getItem("tname"));
+  //call buildNavBar
+  let navBar =  buildNavBar("Home", storage.getItem("aname"), storage.getItem("ename"), storage.getItem("dname"), storage.getItem("tname"));
+
+}
 
 //getAnvil function
 function getAnvil(navURL){
