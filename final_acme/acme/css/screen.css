@@ -20,6 +20,10 @@ h3{
     padding-left: 5px;
 }
 
+nav{
+    width: 100%;
+}
+
 nav ul{
     background-color: #de2226;
     height: 50px;
@@ -100,7 +104,7 @@ figcaption{
 }
 
 #recipesHeader{
-    padding-right: 225px;
+    padding-right: 150px;
 }
 
 #featureHeader{
@@ -169,5 +173,20 @@ footer {
     }
 }
 
+@media screen and (min-width: 1050px) {
+
+    #recipesHeader{
+        margin-right: 400px;
+    }
+
+    #acmeRocket{
+        background-image: url("/final_acme/acme/images/site/feature.jpg");
+        height: 600px;
+    }
+
+    #acmeList{
+        padding: 10px;
+    }
 
 
+}

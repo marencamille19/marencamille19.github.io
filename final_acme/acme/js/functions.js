@@ -16,7 +16,7 @@ function buildPage(){
   getTraps(navURL);
 
   //call buildNavBar
-  let navBar =  buildNavBar("Home", storage.getItem("aname"), storage.getItem("ename"), storage.getItem("dname"), storage.getItem("tname"));
+  let navBar =  buildNavBar("Home", storage.getItem("atitle"), storage.getItem("etitle"), storage.getItem("dtitle"), storage.getItem("ttitle"));
   storage.setItem("navBar", navBar);
   document.getElementById("navList").innerHTML = navBar;
 }
@@ -24,6 +24,7 @@ function buildPage(){
 //getAnvil function
 function getAnvil(navURL){
     let name = 'Anvils';
+    storage.setItem("atitle", name);
     fetch(navURL) 
      .then(function(response){
        if(response.ok){ 
@@ -68,6 +69,7 @@ function getAnvil(navURL){
 //getExplosives function
 function getExplosives(navURL){
   let name = 'Explosives';
+  storage.setItem("etitle", name);
   fetch(navURL) 
    .then(function(response){
      if(response.ok){ 
@@ -112,6 +114,7 @@ function getExplosives(navURL){
 //getDecoys function
 function getDecoys(navURL){
   let name = 'Decoys';
+  storage.setItem("dtitle", name);
   fetch(navURL) 
    .then(function(response){
      if(response.ok){ 
@@ -156,6 +159,7 @@ function getDecoys(navURL){
 //getTraps function
 function getTraps(navURL){
   let name = 'Traps';
+  storage.setItem("ttitle", name);
   fetch(navURL) 
    .then(function(response){
      if(response.ok){ 
