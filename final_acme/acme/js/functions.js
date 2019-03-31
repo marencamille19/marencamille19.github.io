@@ -9,20 +9,21 @@ storage.setItem("navURL", navURL);
 buildPage();
 
 function buildPage(){
-  //call get functions, put in another function eventually
-  getAnvil(navURL);
-  getExplosives(navURL);
-  getDecoys(navURL);
-  getTraps(navURL);
-
   //call buildNavBar
   let navBar =  buildNavBar("Home", storage.getItem("atitle"), storage.getItem("etitle"), storage.getItem("dtitle"), storage.getItem("ttitle"));
   storage.setItem("navBar", navBar);
   document.getElementById("navList").innerHTML = navBar;
-  buildAnvil();
-  buildExplosives();
-  buildDecoys();
-  buildTraps();
+  //get anvil page
+  getAnvil(navURL);
+  
+  //get explosive info
+  getExplosives(navURL);
+
+  //get decoy info
+  getDecoys(navURL);
+
+  //get trap info
+  getTraps(navURL);
 }
 
 // Build the navigation bar list
@@ -31,10 +32,10 @@ function buildNavBar(one, two, three, four, five) {
   storage.setItem("navBarItems", navBarItems);
 
   let navBar = '<li id="home"><a href="index.html" title="Link to home page">' + navBarItems[0] + '</li>';
-  navBar += '<li id="anvils">' + navBarItems[1] + '</li>';
-  navBar += '<li id="explosives">' + navBarItems[2] + '</li>';
-  navBar += '<li id="decoys">' + navBarItems[3] + '</li>';
-  navBar += '<li id="traps">' + navBarItems[4] + '</li>';
+  navBar += '<li id="anvils"><button onClick="buildAnvil()">' + navBarItems[1] + '</button></li>';
+  navBar += '<li id="explosives"><button onClick="buildExplosives()">' + navBarItems[2] + '</button></li>';
+  navBar += '<li id="decoys"><button onClick="buildDecoys()">' + navBarItems[3] + '</button></li>';
+  navBar += '<li id="traps"><button onClick="buildTraps()">' + navBarItems[4] + '</button></li>';
 
   console.log('NavBar is: ' + navBar);
   return navBar;
@@ -42,7 +43,14 @@ function buildNavBar(one, two, three, four, five) {
 
 //build anvil content "page"
 function buildAnvil(){
- //Grab variables
+  //hide main content and show anvil "page"
+  mainContent.setAttribute('class', 'hide');
+  anvilSection.setAttribute('class', '');
+  explosiveSection.setAttribute('class', 'hide');
+  decoySection.setAttribute('class', 'hide');
+  trapSection.setAttribute('class', 'hide');
+
+  //Grab variables
  let aname = storage.getItem("aname");
  let apath = storage.getItem("apath");
  let adescrip = storage.getItem("adescription");
@@ -57,13 +65,6 @@ function buildAnvil(){
  document.getElementById("amanu").innerHTML = amanu;
  document.getElementById("areviews").innerHTML = areviews + "/5 stars";
  document.getElementById("aprice").innerHTML = "$" + aprice;
-
- //hide main content and show anvil "page"
- mainContent.setAttribute('class', 'hide');
- anvilSection.setAttribute('class', '');
- explosiveSection.setAttribute('class', 'hide');
- decoySection.setAttribute('class', 'hide');
- trapSection.setAttribute('class', 'hide');
 }
 
 //getAnvil function
@@ -113,6 +114,14 @@ function getAnvil(navURL){
 
 //build explosives content "page"
 function buildExplosives(){
+   
+  //hide main content and show explosives "page"
+  mainContent.setAttribute('class', 'hide');
+  anvilSection.setAttribute('class', 'hide');
+  explosiveSection.setAttribute('class', '');
+  decoySection.setAttribute('class', 'hide');
+  trapSection.setAttribute('class', 'hide');
+  
   //Grab variables
   let ename = storage.getItem("ename");
   let epath = storage.getItem("epath");
@@ -128,13 +137,6 @@ function buildExplosives(){
   document.getElementById("emanu").innerHTML = emanu;
   document.getElementById("ereviews").innerHTML = ereviews + "/5 stars";
   document.getElementById("eprice").innerHTML = "$" + eprice;
- 
-  //hide main content and show explosives "page"
-  mainContent.setAttribute('class', 'hide');
-  anvilSection.setAttribute('class', 'hide');
-  explosiveSection.setAttribute('class', '');
-  decoySection.setAttribute('class', 'hide');
-  trapSection.setAttribute('class', 'hide');
 }
 
 //getExplosives function
@@ -184,6 +186,13 @@ function getExplosives(navURL){
 
 //build decoys content "page"
 function buildDecoys(){
+  //hide main content and show decoy "page"
+  mainContent.setAttribute('class', 'hide');
+  anvilSection.setAttribute('class', 'hide');
+  explosiveSection.setAttribute('class', 'hide');
+  decoySection.setAttribute('class', '');
+  trapSection.setAttribute('class', 'hide');
+
   //Grab variables
   let dname = storage.getItem("dname");
   let dpath = storage.getItem("dpath");
@@ -199,13 +208,6 @@ function buildDecoys(){
   document.getElementById("dmanu").innerHTML = dmanu;
   document.getElementById("dreviews").innerHTML = dreviews + "/5 stars";
   document.getElementById("dprice").innerHTML = "$" + dprice;
- 
-  //hide main content and show decoy "page"
-  mainContent.setAttribute('class', 'hide');
-  anvilSection.setAttribute('class', 'hide');
-  explosiveSection.setAttribute('class', 'hide');
-  decoySection.setAttribute('class', '');
-  trapSection.setAttribute('class', 'hide');
 }
 
 //getDecoys function
@@ -254,7 +256,14 @@ function getDecoys(navURL){
 }
 
 //build explosives content "page"
-function buildTraps(){
+function buildTraps(){  
+  //hide main content and show traps "page"
+  mainContent.setAttribute('class', 'hide');
+  anvilSection.setAttribute('class', 'hide');
+  explosiveSection.setAttribute('class', 'hide');
+  decoySection.setAttribute('class', 'hide');
+  trapSection.setAttribute('class', '');
+
   //Grab variables
   let tname = storage.getItem("tname");
   let tpath = storage.getItem("tpath");
@@ -270,13 +279,6 @@ function buildTraps(){
   document.getElementById("tmanu").innerHTML = tmanu;
   document.getElementById("treviews").innerHTML = treviews + "/5 stars";
   document.getElementById("tprice").innerHTML = "$" + tprice;
-
-  //hide main content and show traps "page"
-  mainContent.setAttribute('class', 'hide');
-  anvilSection.setAttribute('class', 'hide');
-  explosiveSection.setAttribute('class', 'hide');
-  decoySection.setAttribute('class', 'hide');
-  trapSection.setAttribute('class', '');
 }
 
 //getTraps function

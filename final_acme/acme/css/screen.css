@@ -44,6 +44,13 @@ nav ul li a{
     color: #FFFFFF;
 }
 
+button {
+    border: none;
+    background-color: #de2226;
+    color: white;
+    font-size: 20px;
+}
+
 .price{
     color: #de2226;
     font-size: 30px;
@@ -67,6 +74,10 @@ nav ul li a{
     display: flex;
     flex-direction: row;
     font-size: 25px;
+}
+
+#home{
+    font-size: 20px;
 }
 
 #logo{
