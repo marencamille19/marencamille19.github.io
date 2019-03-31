@@ -61,6 +61,9 @@ function buildAnvil(){
  //hide main content and show anvil "page"
  mainContent.setAttribute('class', 'hide');
  anvilSection.setAttribute('class', '');
+ explosiveSection.setAttribute('class', 'hide');
+ decoySection.setAttribute('class', 'hide');
+ trapSection.setAttribute('class', 'hide');
 }
 
 //getAnvil function
@@ -126,9 +129,12 @@ function buildExplosives(){
   document.getElementById("ereviews").innerHTML = ereviews + "/5 stars";
   document.getElementById("eprice").innerHTML = "$" + eprice;
  
-  //hide main content and show decoy "page"
+  //hide main content and show explosives "page"
   mainContent.setAttribute('class', 'hide');
+  anvilSection.setAttribute('class', 'hide');
   explosiveSection.setAttribute('class', '');
+  decoySection.setAttribute('class', 'hide');
+  trapSection.setAttribute('class', 'hide');
 }
 
 //getExplosives function
@@ -196,7 +202,10 @@ function buildDecoys(){
  
   //hide main content and show decoy "page"
   mainContent.setAttribute('class', 'hide');
+  anvilSection.setAttribute('class', 'hide');
+  explosiveSection.setAttribute('class', 'hide');
   decoySection.setAttribute('class', '');
+  trapSection.setAttribute('class', 'hide');
 }
 
 //getDecoys function
@@ -264,6 +273,9 @@ function buildTraps(){
 
   //hide main content and show traps "page"
   mainContent.setAttribute('class', 'hide');
+  anvilSection.setAttribute('class', 'hide');
+  explosiveSection.setAttribute('class', 'hide');
+  decoySection.setAttribute('class', 'hide');
   trapSection.setAttribute('class', '');
 }
 
