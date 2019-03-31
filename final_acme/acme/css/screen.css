@@ -51,11 +51,16 @@ nav ul li a{
 
 .headings{
     font-size: 30px;
+    margin: 5px;
 }
 
 .images{
     width: 50%;
     margin: 5px;
+}
+
+.hide{
+    display: none;
 }
 
 .content{

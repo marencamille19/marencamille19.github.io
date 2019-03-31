@@ -19,11 +19,10 @@ function buildPage(){
   let navBar =  buildNavBar("Home", storage.getItem("atitle"), storage.getItem("etitle"), storage.getItem("dtitle"), storage.getItem("ttitle"));
   storage.setItem("navBar", navBar);
   document.getElementById("navList").innerHTML = navBar;
-  buildAnvil();
-  buildExplosives();
-  buildDecoys();
-  buildTraps();
-  //document.getElementById("").addEventListener("click", buildAnvil());
+  document.getElementById("anvils").addEventListener("click", buildAnvil());
+  document.getElementById("explosives").addEventListener("click", buildExplosives());
+  document.getElementById("decoys").addEventListener("click", buildDecoys());
+  document.getElementById("traps").addEventListener("click", buildTraps());
 }
 
 // Build the navigation bar list
@@ -58,6 +57,10 @@ function buildAnvil(){
  document.getElementById("amanu").innerHTML = amanu;
  document.getElementById("areviews").innerHTML = areviews + "/5 stars";
  document.getElementById("aprice").innerHTML = "$" + aprice;
+
+ //hide main content and show anvil "page"
+ mainContent.setAttribute('class', 'hide');
+ anvilSection.setAttribute('class', '');
 }
 
 //getAnvil function
@@ -122,7 +125,11 @@ function buildExplosives(){
   document.getElementById("emanu").innerHTML = emanu;
   document.getElementById("ereviews").innerHTML = ereviews + "/5 stars";
   document.getElementById("eprice").innerHTML = "$" + eprice;
- }
+ 
+  //hide main content and show decoy "page"
+  mainContent.setAttribute('class', 'hide');
+  explosiveSection.setAttribute('class', '');
+}
 
 //getExplosives function
 function getExplosives(navURL){
@@ -186,7 +193,11 @@ function buildDecoys(){
   document.getElementById("dmanu").innerHTML = dmanu;
   document.getElementById("dreviews").innerHTML = dreviews + "/5 stars";
   document.getElementById("dprice").innerHTML = "$" + dprice;
- }
+ 
+  //hide main content and show decoy "page"
+  mainContent.setAttribute('class', 'hide');
+  decoySection.setAttribute('class', '');
+}
 
 //getDecoys function
 function getDecoys(navURL){
@@ -250,7 +261,11 @@ function buildTraps(){
   document.getElementById("tmanu").innerHTML = tmanu;
   document.getElementById("treviews").innerHTML = treviews + "/5 stars";
   document.getElementById("tprice").innerHTML = "$" + tprice;
- }
+
+  //hide main content and show traps "page"
+  mainContent.setAttribute('class', 'hide');
+  trapSection.setAttribute('class', '');
+}
 
 //getTraps function
 function getTraps(navURL){
