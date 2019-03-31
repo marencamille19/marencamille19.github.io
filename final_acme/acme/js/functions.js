@@ -19,6 +19,45 @@ function buildPage(){
   let navBar =  buildNavBar("Home", storage.getItem("atitle"), storage.getItem("etitle"), storage.getItem("dtitle"), storage.getItem("ttitle"));
   storage.setItem("navBar", navBar);
   document.getElementById("navList").innerHTML = navBar;
+  buildAnvil();
+  buildExplosives();
+  buildDecoys();
+  buildTraps();
+  //document.getElementById("").addEventListener("click", buildAnvil());
+}
+
+// Build the navigation bar list
+function buildNavBar(one, two, three, four, five) {
+  let navBarItems = [one, two, three, four, five];
+  storage.setItem("navBarItems", navBarItems);
+
+  let navBar = '<li id="home"><a href="index.html" title="Link to home page">' + navBarItems[0] + '</li>';
+  navBar += '<li id="anvils">' + navBarItems[1] + '</li>';
+  navBar += '<li id="explosives">' + navBarItems[2] + '</li>';
+  navBar += '<li id="decoys">' + navBarItems[3] + '</li>';
+  navBar += '<li id="traps">' + navBarItems[4] + '</li>';
+
+  console.log('NavBar is: ' + navBar);
+  return navBar;
+ }
+
+//build anvil content "page"
+function buildAnvil(){
+ //Grab variables
+ let aname = storage.getItem("aname");
+ let apath = storage.getItem("apath");
+ let adescrip = storage.getItem("adescription");
+ let amanu = storage.getItem("amanufacturer");
+ let areviews = storage.getItem("areviews");
+ let aprice = storage.getItem("aprice");
+
+ //put info in 'page'
+ document.getElementById("aname").innerHTML = aname;
+ document.getElementById("apath").src = apath;
+ document.getElementById("adescrip").innerHTML = adescrip;
+ document.getElementById("amanu").innerHTML = amanu;
+ document.getElementById("areviews").innerHTML = areviews + "/5 stars";
+ document.getElementById("aprice").innerHTML = "$" + aprice;
 }
 
 //getAnvil function
@@ -66,6 +105,25 @@ function getAnvil(navURL){
     .catch(error => console.log("There was a getAnvil error: ", error))
 }
 
+//build explosives content "page"
+function buildExplosives(){
+  //Grab variables
+  let ename = storage.getItem("ename");
+  let epath = storage.getItem("epath");
+  let edescrip = storage.getItem("edescription");
+  let emanu = storage.getItem("emanufacturer");
+  let ereviews = storage.getItem("ereviews");
+  let eprice = storage.getItem("eprice");
+ 
+  //put info in 'page'
+  document.getElementById("ename").innerHTML = ename;
+  document.getElementById("epath").src = epath;
+  document.getElementById("edescrip").innerHTML = edescrip;
+  document.getElementById("emanu").innerHTML = emanu;
+  document.getElementById("ereviews").innerHTML = ereviews + "/5 stars";
+  document.getElementById("eprice").innerHTML = "$" + eprice;
+ }
+
 //getExplosives function
 function getExplosives(navURL){
   let name = 'Explosives';
@@ -110,6 +168,25 @@ function getExplosives(navURL){
   })
   .catch(error => console.log("There was a getExplosives error: ", error))
 }
+
+//build decoys content "page"
+function buildDecoys(){
+  //Grab variables
+  let dname = storage.getItem("dname");
+  let dpath = storage.getItem("dpath");
+  let ddescrip = storage.getItem("ddescription");
+  let dmanu = storage.getItem("dmanufacturer");
+  let dreviews = storage.getItem("dreviews");
+  let dprice = storage.getItem("dprice");
+ 
+  //put info in 'page'
+  document.getElementById("dname").innerHTML = dname;
+  document.getElementById("dpath").src = dpath;
+  document.getElementById("ddescrip").innerHTML = ddescrip;
+  document.getElementById("dmanu").innerHTML = dmanu;
+  document.getElementById("dreviews").innerHTML = dreviews + "/5 stars";
+  document.getElementById("dprice").innerHTML = "$" + dprice;
+ }
 
 //getDecoys function
 function getDecoys(navURL){
@@ -156,6 +233,25 @@ function getDecoys(navURL){
   .catch(error => console.log("There was a getDecoys error: ", error))
 }
 
+//build explosives content "page"
+function buildTraps(){
+  //Grab variables
+  let tname = storage.getItem("tname");
+  let tpath = storage.getItem("tpath");
+  let tdescrip = storage.getItem("tdescription");
+  let tmanu = storage.getItem("tmanufacturer");
+  let treviews = storage.getItem("treviews");
+  let tprice = storage.getItem("tprice");
+ 
+  //put info in 'page'
+  document.getElementById("tname").innerHTML = tname;
+  document.getElementById("tpath").src = tpath;
+  document.getElementById("tdescrip").innerHTML = tdescrip;
+  document.getElementById("tmanu").innerHTML = tmanu;
+  document.getElementById("treviews").innerHTML = treviews + "/5 stars";
+  document.getElementById("tprice").innerHTML = "$" + tprice;
+ }
+
 //getTraps function
 function getTraps(navURL){
   let name = 'Traps';
@@ -200,17 +296,3 @@ function getTraps(navURL){
   })
   .catch(error => console.log("There was a getTraps error: ", error))
 }
-
-// Build the navigation bar list
-function buildNavBar(one, two, three, four, five) {
-   let navBarItems = [one, two, three, four, five];
-   storage.setItem("navBarItems", navBarItems);
-
-   let navBar = '<li><a href="index.html" title="Link to home page">' + navBarItems[0] + '</li>';
-
-   for(let i = 1; i < navBarItems.length; i++){
-     navBar += '<li>' + navBarItems[i] + '</li>';
-   }
-   console.log('NavBar is: ' + navBar);
-   return navBar;
-  }
