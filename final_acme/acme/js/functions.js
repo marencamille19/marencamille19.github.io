@@ -15,19 +15,15 @@ function buildPage(){
   document.getElementById("navList").innerHTML = navBar;
   //get anvil page
   getAnvil(navURL);
-  document.getElementById("anvils").addEventListener("click",buildAnvil());
   
   //get explosive info
   getExplosives(navURL);
-  document.getElementById("explosives").addEventListener("click", buildExplosives());
 
   //get decoy info
   getDecoys(navURL);
-  document.getElementById("decoys").addEventListener("click", buildDecoys());
 
   //get trap info
   getTraps(navURL);
-  document.getElementById("traps").addEventListener("click",buildTraps());
 }
 
 // Build the navigation bar list
@@ -36,10 +32,10 @@ function buildNavBar(one, two, three, four, five) {
   storage.setItem("navBarItems", navBarItems);
 
   let navBar = '<li id="home"><a href="index.html" title="Link to home page">' + navBarItems[0] + '</li>';
-  navBar += '<li><button id="anvils">' + navBarItems[1] + '</button></li>';
-  navBar += '<li><button id="explosives">' + navBarItems[2] + '</button></li>';
-  navBar += '<li><button id="decoys">' + navBarItems[3] + '</button></li>';
-  navBar += '<li><button id="traps">' + navBarItems[4] + '</button></li>';
+  navBar += '<li id="anvils"><button onClick="buildAnvil()">' + navBarItems[1] + '</button></li>';
+  navBar += '<li id="explosives"><button onClick="buildExplosives()">' + navBarItems[2] + '</button></li>';
+  navBar += '<li id="decoys"><button onClick="buildDecoys()">' + navBarItems[3] + '</button></li>';
+  navBar += '<li id="traps"><button onClick="buildTraps()">' + navBarItems[4] + '</button></li>';
 
   console.log('NavBar is: ' + navBar);
   return navBar;
