@@ -19,10 +19,10 @@ function buildPage(){
   let navBar =  buildNavBar("Home", storage.getItem("atitle"), storage.getItem("etitle"), storage.getItem("dtitle"), storage.getItem("ttitle"));
   storage.setItem("navBar", navBar);
   document.getElementById("navList").innerHTML = navBar;
-  document.getElementById("anvils").addEventListener("click", buildAnvil());
-  document.getElementById("explosives").addEventListener("click", buildExplosives());
-  document.getElementById("decoys").addEventListener("click", buildDecoys());
-  document.getElementById("traps").addEventListener("click", buildTraps());
+  buildAnvil();
+  buildExplosives();
+  buildDecoys();
+  buildTraps();
 }
 
 // Build the navigation bar list
