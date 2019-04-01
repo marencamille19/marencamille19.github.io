@@ -51,7 +51,12 @@ button {
     font-size: 20px;
 }
 
-.price{
+#content{
+    display: flex;
+    flex-direction: column;
+}
+
+.contentPrice{
     color: #de2226;
     font-size: 30px;
 }
@@ -64,15 +69,15 @@ button {
 .images{
     width: 50%;
     margin: 5px;
+    align-self: center;
 }
 
 .hide{
     display: none;
 }
 
-.content{
-    display: flex;
-    flex-direction: row;
+#content{
+    margin-left: 5px;
     font-size: 25px;
 }
 
@@ -207,6 +212,15 @@ footer {
     figure{
         width: 40%;
     }
+
+    #content{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #picture{
+        width: 40%; 
+    } 
 }
 
 @media screen and (min-width: 1050px) {
