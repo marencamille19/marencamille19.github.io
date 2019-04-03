@@ -6,8 +6,6 @@ let storage = window.localStorage;
 let navURL = "/final_acme/acme/js/acme.json";
 storage.setItem("navURL", navURL);
 
-//buildPage();
-
 //Home page
 document.getElementById('home').addEventListener("click", clickHome);
 
