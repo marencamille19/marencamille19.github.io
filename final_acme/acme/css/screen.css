@@ -38,7 +38,7 @@ nav ul li{
     padding: 5px;
     margin-right: 5px; 
     color: #FFFFFF; 
-    font-size: 20px;
+    font-size: 13px;
 }
 
 button {
@@ -64,7 +64,7 @@ button {
 }
 
 .headings{
-    font-size: 50px;
+    font-size: 45px;
     margin: 5px;
 }
 
@@ -162,6 +162,14 @@ footer {
     margin-top: 10px;
 }
 
+#picture{
+    width: 75%;
+}
+
+#content{
+    font-size: 20px;
+}
+
 @media screen and (min-width: 750px) {
     h2{
         font-size: 35px;
@@ -171,6 +179,10 @@ footer {
         font-size: 27px;
         padding-top: 5px;
         margin: 0;
+    }
+
+    nav ul li{
+        font-size: 20px;
     }
     
     #acmeRocket{
