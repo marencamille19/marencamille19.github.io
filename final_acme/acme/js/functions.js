@@ -6,28 +6,63 @@ let storage = window.localStorage;
 let navURL = "/final_acme/acme/js/acme.json";
 storage.setItem("navURL", navURL);
 
+fetchNav(navURL);
+
+function fetchNav(navURL){
+    fetch(navURL)
+    .then(function(response){
+        if(response.ok){
+          return response.json();
+        }
+        throw new ERROR('Network response was not Ok.');
+    })
+    .then(function(data){
+      console.log("From the fetchNav function: " + data);
+
+      let navItems = [];
+      for(let i=0; i<data.Navigation.navBar.length; i++){
+        navItems[i] = data.Navigation.navBar[i];
+      }
+      fillNav(navItems);
+    })
+}
+
+function fillNav(navItems){
+  let ul = document.getElementById("navList");
+  for (let i=0; i< navItems.length; i++){
+    let li = document.createElement("li");
+    let text = document.createTextNode(navItems[i]);
+    li.appendChild(text);
+    li.setAttribute("id", "nav" + navItems[i]);
+    ul.appendChild(li);
+  }
+  clickListeners();
+}
+
+function clickListeners(){
 //Home page
-document.getElementById('home').addEventListener("click", clickHome);
+document.getElementById('navHome').addEventListener("click", clickHome);
 
 //anvils page onclick
-let anvils = document.querySelector("#anvils");
+let anvils = document.querySelector("#navAnvils");
 anvils.addEventListener("click", navClick);
 anvils.myParam = "Anvils";
 
 //explosives page onclick
-let explosives = document.querySelector("#explosives");
+let explosives = document.querySelector("#navExplosives");
 explosives.addEventListener("click", navClick);
 explosives.myParam = "Explosives";
 
 //decoys page onclick
-let decoys = document.querySelector("#decoys");
+let decoys = document.querySelector("#navDecoys");
 decoys.addEventListener("click", navClick);
 decoys.myParam = "Decoys";
 
 //traps page onclick
-let traps = document.querySelector("#traps");
+let traps = document.querySelector("#navTraps");
 traps.addEventListener("click", navClick);
 traps.myParam = "Traps";
+}
 
 function buildPage(){
   //call buildNavBar
@@ -48,6 +83,7 @@ function buildNavBar(one, two, three, four, five) {
   navBar += '<li id="traps">' + navBarItems[4] + '</li>';
 
   console.log('NavBar is: ' + navBar);
+  clickListeners();
   return navBar;
  }
 
