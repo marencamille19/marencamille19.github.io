@@ -168,7 +168,7 @@ footer {
 }
 
 #picture{
-    width: 75%;
+    width: 90%;
     align-self: center;
 }
 
@@ -235,17 +235,21 @@ footer {
 
     #content{
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
     }
 
-    #contentContent{
+    #contentImage{
         overflow: hidden;
+        display: flex;
+        flex-direction: row;
     }
 
     #picture{
         width: 50%;
         float: left;
-        margin-right: 10px;
+        margin-right: 5px;
+        align-self: flex-start;
     } 
 }
 
