@@ -162,8 +162,14 @@ footer {
     margin-top: 10px;
 }
 
+#contentImage{
+    display: flex;
+    flex-direction: column;
+}
+
 #picture{
     width: 75%;
+    align-self: center;
 }
 
 #content{
