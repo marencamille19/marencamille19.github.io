@@ -114,6 +114,10 @@ function navClick(event){
       let o = data[event.target.myParam];
       console.log("User clicked " + event.target.myParam);
       console.log("Data passed: " + o);
+
+
+      let title = document.getElementById("title");
+      title.innerHTML = "ACME site | " + event.target.myParam;
       
       document.getElementById("name").innerHTML = o.name;
       document.getElementById("picture").src = o.path;
