@@ -24,6 +24,7 @@ function fetchNav(navURL){
         navItems[i] = data.Navigation.navBar[i];
       }
       fillNav(navItems);
+      console.log("Nav items are " + navItems);
     })
 }
 
