@@ -44,6 +44,7 @@ function clickListeners(){
 //Home page
 document.getElementById('navHome').addEventListener("click", clickHome);
 
+
 //anvils page onclick
 let anvils = document.querySelector("#navAnvils");
 anvils.addEventListener("click", navClick);
