@@ -17,12 +17,12 @@ function fetchNav(navURL){
         throw new ERROR('Network response was not Ok.');
     })
     .then(function(data){
-      console.log("From the fetchNav function: " + data);
 
       let navItems = [];
       for(let i=0; i<data.Navigation.navBar.length; i++){
         navItems[i] = data.Navigation.navBar[i];
       }
+
       fillNav(navItems);
       console.log("Nav items are " + navItems);
     })
@@ -43,7 +43,6 @@ function fillNav(navItems){
 function clickListeners(){
 //Home page
 document.getElementById('navHome').addEventListener("click", clickHome);
-
 
 //anvils page onclick
 let anvils = document.querySelector("#navAnvils");
@@ -109,14 +108,13 @@ function navClick(event){
        throw new ERROR('Response not OK.');
      })
      .then(function (data) {  
-     
       //hide home page show content page
       document.getElementById("mainContent").setAttribute("class", "hide");
       document.getElementById("item").setAttribute("class", "");
 
       let o = data[event.target.myParam];
       console.log("User clicked " + event.target.myParam);
-      console.log("Data passed: " + o);
+      console.log("Data passed: " + event.target.myParam);
 
 
       let title = document.getElementById("title");
