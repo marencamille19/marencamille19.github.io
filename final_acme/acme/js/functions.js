@@ -94,7 +94,8 @@ function clickHome(){
   //hide home page
   document.getElementById("mainContent").setAttribute("class", "");
   document.getElementById("item").setAttribute("class", "hide");
-
+  let title = document.getElementById("title");
+  title.innerHTML = "ACME site";
   console.log("Home page displayed");
 }
 
