@@ -17,7 +17,7 @@ function fetchNav(navURL){
         throw new ERROR('Network response was not Ok.');
     })
     .then(function(data){
-
+      console.log(data);
       let navItems = [];
       for(let i=0; i<data.Navigation.navBar.length; i++){
         navItems[i] = data.Navigation.navBar[i];
